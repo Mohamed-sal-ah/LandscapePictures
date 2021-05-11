@@ -1,0 +1,18 @@
+{
+    "green_primary": "#1F6125",
+    "green_light_secondary": "#618247",
+    "green_dark_trinary": "#123F16",
+    "black": "#000000",
+    "white": "#FFFFFF",
+    "gradient": {
+        "light": "rgba(0,0,0,0.3)",
+        "regular": "rgba(0,0,0,0.5)"
+    },
+    "gray": {
+        "light": "#BDBDBD",
+        "dark": "#4F4F4F",
+        "white_gray": "#EDEDED"
+    },
+    "red": "#8B3434",
+    "blue": "#2C5777"
+}

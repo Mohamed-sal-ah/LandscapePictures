@@ -1,0 +1,60 @@
+{
+    "database": {
+        "images": [
+            {
+                "date": "date of upload",
+                "description": "description of image",
+                "location": "location of image taken ",
+                "user_id": "id for user",
+                "fileName": "name of image file",
+                "category": "array of string category",
+                "username": "username"
+            },
+            {
+                "date": "date of upload",
+                "description": "description of image",
+                "location": "location of image taken ",
+                "user_id": "id for user",
+                "fileName": "name of image file",
+                "category": "array of string category",
+                "username": "username"
+            }
+        ],
+        "users": {
+            "userid1": {
+                "email": "email of user",
+                "username": "username",
+                "images": [
+                    "file_id1"
+                ],
+                "profilePicture": "profileImageID1",
+                "collections": [
+                    {
+                        "collectionName": "name of collection",
+                        "images": [
+                            "file_id1"
+                        ]
+                    }
+                ]
+            },
+            "userid2": {
+                "email": "email of user",
+                "username": "username",
+                "images": [
+                    "file_id2"
+                ],
+                "profilePicture": "profileImageID1",
+                "collections": []
+            }
+        }
+    },
+    "storage": {
+        "images": [
+            "file_id1",
+            "file_id2"
+        ],
+        "profilePicture": [
+            "profileImageID1"
+        ]
+    }
+}
