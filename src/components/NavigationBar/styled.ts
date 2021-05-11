@@ -47,6 +47,11 @@ color:${theme.colors.gray.dark};
 font-size:17px;
 `
 
+export const HamburgerBarButton = styled.TouchableOpacity`
+ padding-left: 10px;
+padding-right: 10px
+`
+
 export const ModalView = styled.View`
 height:100%;
 width:100%;

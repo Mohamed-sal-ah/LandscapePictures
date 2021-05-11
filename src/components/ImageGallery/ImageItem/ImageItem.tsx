@@ -1,5 +1,5 @@
 import React, { useRef, FC } from 'react'
-import { StyleSheet, View, TouchableOpacity } from 'react-native'
+import { StyleSheet } from 'react-native'
 import Image from 'react-native-scalable-image';
 import theme from '../../../themes';
 import * as STYLED from './styled'
@@ -34,42 +34,23 @@ const ImageItem: FC<Props> = ({ fullWidth, oneImage, setOnAuth, onDeleteImage = 
                     onPress={() => onPressUser !== null && onPressUser}
                 >
                     {users[`${oneImage.user_id}`].profilePicture ?
-                        <Image
-                            accessibilityLabel={oneImage.hasOwnProperty('alt') ? oneImage.alt : `Photo by ${oneImage.username}`}
-                            style={{
-                                maxWidth: 60,
-                                maxHeight: 60,
-                                borderRadius: 100
-                            }} source={{ uri: users[`${oneImage.user_id}`].profilePictureFile ? users[`${oneImage.user_id}`].profilePictureFile : require(`../../../storage/profileImage/${users[`${oneImage.user_id}`].profilePicture}`) }} />
+                        <STYLED.ProfilePicture source={{ uri: users[`${oneImage.user_id}`].profilePictureFile ? users[`${oneImage.user_id}`].profilePictureFile : require(`../../../storage/profileImage/${users[`${oneImage.user_id}`].profilePicture}`) }} />
                         :
-                        <View style={{
-                            padding: 10,
-                            borderRadius: 100,
-                            backgroundColor: theme.colors.red
-                        }}>
-
+                        <STYLED.DefaultProfilePictureView>
                             <UserSvg fillColor={theme.colors.white} />
-                        </View>}
+                        </STYLED.DefaultProfilePictureView>}
                 </STYLED.ProfilePictureView>
                 <STYLED.UsernameText style={{ color: theme.colors.gray.dark, fontSize: 20 }}>{oneImage.username}</STYLED.UsernameText>
                 {setOnAuth &&
-                    <TouchableOpacity
-                        style={{
-                            backgroundColor: theme.colors.red,
-                            position: "absolute",
-                            borderRadius: 5,
-                            padding: '8px',
-                            marginTop: '5px',
-                            marginRight: "10px",
-                            right: 0
-                        }}
+                    <STYLED.DeleteButton
                         onPress={() => onDeleteImage(oneImage)}>
                         <XmarkSvg fillColor={theme.colors.white} />
-                    </TouchableOpacity>
+                    </STYLED.DeleteButton>
                 }
             </STYLED.MobileViewUserInfo>
             <Image width={(Math.floor(theme.fullWidth / 2 - 20) % 2 == 0 ? Math.floor(theme.fullWidth / 2 - 20) : Math.floor(theme.fullWidth / 2 - 20) + 1)}
                 height={500}
+                accessibilityLabel={oneImage.hasOwnProperty('alt') ? oneImage.alt : `Photo by ${oneImage.username}`}
                 style={{ minWidth: '100%', minHeight: 300 }}
                 source={{ uri: oneImage.fileName.startsWith('https') ? oneImage.fileName : require(`../../../storage/images/${oneImage.fileName}`) }}
             />
@@ -78,19 +59,10 @@ const ImageItem: FC<Props> = ({ fullWidth, oneImage, setOnAuth, onDeleteImage = 
                 ref={ref}
             >
                 {setOnAuth ?
-                    <TouchableOpacity
-                        style={{
-                            backgroundColor: theme.colors.red,
-                            position: "absolute",
-                            borderRadius: 5,
-                            padding: '6px',
-                            marginTop: '5px',
-                            marginRight: "10px",
-                            right: 0
-                        }}
+                    <STYLED.DeleteButton
                         onPress={() => onDeleteImage(oneImage)}>
                         <XmarkSvg fillColor={theme.colors.white} />
-                    </TouchableOpacity>
+                    </STYLED.DeleteButton>
                     :
                     <>
                         <STYLED.UserProfileView>
@@ -104,14 +76,9 @@ const ImageItem: FC<Props> = ({ fullWidth, oneImage, setOnAuth, onDeleteImage = 
                                         borderRadius: 100
                                     }} source={{ uri: users[`${oneImage.user_id}`].profilePictureFile ? users[`${oneImage.user_id}`].profilePictureFile : require(`../../../storage/profileImage/${users[`${oneImage.user_id}`].profilePicture}`) }} />
                                     :
-                                    <View style={{
-                                        padding: 10,
-                                        borderRadius: 100,
-                                        backgroundColor: theme.colors.red
-                                    }}>
-
+                                    <STYLED.DefaultProfilePictureView>
                                         <UserSvg fillColor={theme.colors.white} />
-                                    </View>}
+                                    </STYLED.DefaultProfilePictureView>}
                             </STYLED.ProfilePictureView>
                             <STYLED.UsernameText style={{ color: theme.colors.white, fontSize: 15 }}>{oneImage.username}</STYLED.UsernameText>
                         </STYLED.UserProfileView>

@@ -1,5 +1,4 @@
 import React, { FC } from 'react'
-import { Image } from 'react-native'
 import * as STYLED from './styled'
 import { useNavigation } from '@react-navigation/native'
 import { screenName } from '../../../navigation/routes'
@@ -17,8 +16,7 @@ const ExploreCategoryItem: FC<Props> = ({ categoryItem }) => {
     }
     return (
         <STYLED.ExploreItemCategory onPress={() => onSelectCategory(categoryItem.type)}>
-            <Image
-                style={{ width: "100%", height: "100%" }}
+            <STYLED.ExploreCategoryImage
                 source={{ uri: require(`../../../storage/categoryImages/${categoryItem.file}`) }}
             />
             <STYLED.GradiantItem>

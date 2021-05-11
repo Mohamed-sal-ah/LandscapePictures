@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { screenName } from '../../navigation/routes'
 import useConnect from '../../hooks/useConnect'
@@ -14,32 +13,32 @@ const objectText = [
     {
         category: "Forest",
         title: "Forest",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus id urna in lobortis. Nunc maximus mi at lorem sollicitudin."
+        text: "See the Beautiful Treefilled Landscape of greenery"
     },
     {
         category: "Coast",
         title: "Coast",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus id urna in lobortis. Nunc maximus mi at lorem sollicitudin."
+        text: "Explore The Rocky and Sandy Beaches"
     },
     {
         category: "Mountains",
         title: "Mountains",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus id urna in lobortis. Nunc maximus mi at lorem sollicitudin."
+        text: "See the beutififul mountains"
     },
     {
         category: "Snow And Ice",
         title: "Snow and Ice",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus id urna in lobortis. Nunc maximus mi at lorem sollicitudin."
+        text: "See the forzen landscape"
     },
     {
         category: "Desert",
         title: "Desert",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus id urna in lobortis. Nunc maximus mi at lorem sollicitudin."
+        text: "Explore the dry sandy places"
     },
     {
         category: "Grasslands",
         title: "Grasslands",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus id urna in lobortis. Nunc maximus mi at lorem sollicitudin."
+        text: "See the Beuftiful flat grasslands"
     }
 ]
 
@@ -91,7 +90,7 @@ const CategoryScreen = ({ route }: any) => {
         <STYLED.FullPage>
             <NavigationBar />
             {!loading &&
-                <View style={{ marginTop: 70, flex: 1, alignItems: 'center', width: '100%' }}>
+                <STYLED.FullCategoryView>
                     <STYLED.CategoryTitle>{categoryObject.title}</STYLED.CategoryTitle>
                     <STYLED.CategoryText>{categoryObject.text}</STYLED.CategoryText>
                     <Modal
@@ -121,7 +120,7 @@ const CategoryScreen = ({ route }: any) => {
                         <ImageModal imageData={imageValues} onNavigateUser={onNavigateUser} closeImageModal={closeImageModal} />
                     </Modal>
                     <ImageGallery onNavigateUser={onNavigateUser} openImageModal={openImageModal} imagesArray={filtredImages} />
-                </View>
+                </STYLED.FullCategoryView>
             }
         </STYLED.FullPage>
     )

@@ -89,9 +89,9 @@ const NavigationBar = ({ showSearchBar = true, searchResult = '' }: Partial<Prop
                     </>
                 }
             </STYLED.NavigationSection> :
-                <TouchableOpacity onPress={() => setBoolModal(!boolModal)} style={{ paddingLeft: 10, paddingRight: 10 }}>
+                <STYLED.HamburgerBarButton onPress={() => setBoolModal(!boolModal)}>
                     <HamburgerBar fillColor={theme.colors.gray.dark} size={theme.fullWidth > 600 ? 25 : 20} />
-                </TouchableOpacity>
+                </STYLED.HamburgerBarButton>
             }
         </STYLED.FullViewNavigation>
         {boolModal &&

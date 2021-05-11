@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { screenName } from '../../navigation/routes'
 import useConnect from '../../hooks/useConnect'
@@ -55,12 +54,7 @@ const SearchResultScreen = ({ route }: any) => {
             {!loading &&
                 <>
                     <NavigationBar searchResult={route.params.search} />
-                    <View style={{
-                        marginTop: 70,
-                        flex: 1,
-                        alignItems: 'center',
-                        width: '100%'
-                    }}>
+                    <STYLED.FullSearchResultView>
                         {filtredImages.length > 0 ? <>
                             <STYLED.SearchResultText
                                 style={{ fontSize: theme.fullWidth > 650 ? 30 : 15 }}
@@ -95,16 +89,11 @@ const SearchResultScreen = ({ route }: any) => {
                             <ImageGallery imagesArray={filtredImages} onNavigateUser={onNavigateUser} openImageModal={openImageModal} setOnAuth={false} />
                         </>
                             :
-                            <View style={{
-                                height: "100%",
-                                flex: 1,
-                                justifyContent: 'center',
-                                alignItems: 'center'
-                            }}>
+                            <STYLED.NoResultView>
                                 <STYLED.SearchResultText>Sorry couldn't find results for {route.params.search}</STYLED.SearchResultText>
-                            </View>
+                            </STYLED.NoResultView>
                         }
-                    </View>
+                    </STYLED.FullSearchResultView>
                 </>
             }
         </STYLED.FullPage >

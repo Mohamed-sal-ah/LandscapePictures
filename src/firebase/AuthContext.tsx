@@ -48,6 +48,7 @@ export const AuthProvider = ({ children }: any) => {
     }
 
     useEffect(() => {
+        // User state
         const unSubscribe = auth.onAuthStateChanged(async (authUser: any) => {
             const userInfo: any = await setUserData(authUser)
             if (reduxUser && userInfo) {

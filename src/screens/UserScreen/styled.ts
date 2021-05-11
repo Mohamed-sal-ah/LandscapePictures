@@ -7,6 +7,19 @@ align-items:center;
 background-color:${theme.colors.white};
 `
 
+export const FullUserView = styled.View`
+margin-top: 70px;
+align-items:center;
+justify-content:flex-start;
+width: 100%;
+`
+
+export const ProfilePicture = styled.Image`
+width:100px;
+height:100px;
+border-radius:100%;
+`
+
 export const UserInfoView = styled.View`
 flex:0 1 auto;
 align-items:center;

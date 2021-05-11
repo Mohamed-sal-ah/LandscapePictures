@@ -1,5 +1,4 @@
 import React from 'react'
-import { View } from 'react-native'
 import NavigationBar from '../../components/NavigationBar'
 import * as STYLED from './styled'
 import categoryArray from '../../data/categorys.json'
@@ -19,7 +18,7 @@ const ExploreScreen = () => {
     return (
         <STYLED.FullPage>
             <NavigationBar />
-            <View style={{ marginTop: 70, flex: 1, alignItems: 'center', width: '100%' }}>
+            <STYLED.FullExploreView>
                 <STYLED.ExploreTitle>Explore</STYLED.ExploreTitle>
                 <STYLED.ExploreText>Browse throug thousands of pictures of nature</STYLED.ExploreText>
                 <div style={{
@@ -34,7 +33,7 @@ const ExploreScreen = () => {
                         <ExploreCategoryItem categoryItem={categoryItem} key={index} />
                     ))}
                 </div>
-            </View>
+            </STYLED.FullExploreView>
         </STYLED.FullPage>
     )
 }

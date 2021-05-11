@@ -6,6 +6,15 @@ height:100%;
 background-color:${theme.colors.white};
 `
 
+export const FullAboutView = styled.View`
+margin-top: 70;
+height: fit-content;
+`
+
+export const AboutImage = styled.Image`
+width:100%;
+`
+
 export const FullPageRow = styled.View`
 flex:1;
 align-items:center;

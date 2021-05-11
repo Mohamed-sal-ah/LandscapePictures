@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { View, TouchableOpacity } from 'react-native'
+import { TouchableOpacity } from 'react-native'
 import Image from 'react-native-scalable-image';
 import theme from '../../themes';
 import * as STYLED from './styled'
@@ -32,22 +32,13 @@ const ImageModal: FC<Props> = ({ closeImageModal, onNavigateUser, imageData }) =
                             <STYLED.ProfilePictureView
                             >
                                 {users[`${imageData.user_id}`].profilePicture ?
-                                    <Image
-                                        accessibilityLabel={imageData.hasOwnProperty('alt') ? imageData.alt : `Photo by ${imageData.username}`}
-                                        style={{
-                                            maxWidth: 44,
-                                            maxHeight: 44,
-                                            borderRadius: 100
-                                        }} source={{ uri: users[`${imageData.user_id}`].profilePictureFile ? users[`${imageData.user_id}`].profilePictureFile : require(`../../storage/profileImage/${users[`${imageData.user_id}`].profilePicture}`) }} />
+                                    <STYLED.ProfilePicture
+                                        source={{ uri: users[`${imageData.user_id}`].profilePictureFile ? users[`${imageData.user_id}`].profilePictureFile : require(`../../storage/profileImage/${users[`${imageData.user_id}`].profilePicture}`) }} />
                                     :
-                                    <View style={{
-                                        padding: 10,
-                                        borderRadius: 100,
-                                        backgroundColor: theme.colors.red
-                                    }}>
+                                    <STYLED.DefaultProfilePictureView>
 
                                         <UserSvg fillColor={theme.colors.white} />
-                                    </View>}
+                                    </STYLED.DefaultProfilePictureView>}
                             </STYLED.ProfilePictureView>
                         </TouchableOpacity>
                         <STYLED.UsernameText>{imageData.username}</STYLED.UsernameText>
@@ -60,17 +51,14 @@ const ImageModal: FC<Props> = ({ closeImageModal, onNavigateUser, imageData }) =
                     width={(Math.floor(theme.fullWidth * 0.9) % 2 == 0 ? Math.floor(theme.fullWidth * 0.9) : Math.floor(theme.fullWidth * 0.9) + 1)}
                     height={(Math.floor(theme.fullHeight * 0.7) % 2 == 0 ? Math.floor(theme.fullHeight * 0.7) : Math.floor(theme.fullHeight * 0.7) + 1)}
                     style={{ paddingBottom: 20 }}
+                    accessibilityLabel={imageData.hasOwnProperty('alt') ? imageData.alt : `Photo by ${imageData.username}`}
                     source={{ uri: imageData.fileName.startsWith('https') ? imageData.fileName : require(`../../storage/images/${imageData.fileName}`) }} />
                 <STYLED.InfoAndDownLoadView>
                     <STYLED.ImageInfoView>
                         <STYLED.LoactionView>
-                            <View
-                                style={{
-                                    padding: '6px'
-                                }}
-                            >
+                            <STYLED.LocationIconView>
                                 <LocationSvg fillColor={theme.colors.black} />
-                            </View>
+                            </STYLED.LocationIconView>
                             <STYLED.ImageInfoText style={{ color: theme.colors.black }}>{imageData.location}</STYLED.ImageInfoText>
                         </STYLED.LoactionView>
                         <STYLED.ImageInfoText style={{ color: theme.colors.gray.dark, marginLeft: '36px' }}>{imageData.description}</STYLED.ImageInfoText>
@@ -93,12 +81,9 @@ const ImageModal: FC<Props> = ({ closeImageModal, onNavigateUser, imageData }) =
 
                     >
                         <STYLED.DownLoadText>Download</STYLED.DownLoadText>
-                        <View style={{
-                            backgroundColor: theme.colors.green_light_secondary,
-                            padding: '6px'
-                        }}>
+                        <STYLED.DownloadIconView>
                             <ArrowDownSvg fillColor={theme.colors.white} />
-                        </View>
+                        </STYLED.DownloadIconView>
                     </a>
                 </STYLED.InfoAndDownLoadView>
             </>}

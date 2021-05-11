@@ -15,14 +15,6 @@ import { XmarkSvg } from '../../assets'
 import categoryArray from '../../data/categorys.json'
 
 const options = categoryArray.map((item: any) => ({ value: item.type, label: item.type }))
-// const options = [
-//     { value: 'Forest', label: 'Forest' },
-//     { value: 'Coast', label: 'Coast' },
-//     { value: 'Mountains', label: 'Mountains' },
-//     { value: 'Snow And Ice', label: 'Snow And Ice' },
-//     { value: 'Desert', label: 'Desert' },
-//     { value: 'Grasslands', label: 'Grasslands' }
-// ];
 
 const customStyles = {
     content: {

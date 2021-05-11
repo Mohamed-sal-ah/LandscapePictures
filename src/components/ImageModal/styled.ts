@@ -9,6 +9,12 @@ padding:20px;
 height:100%;
 `
 
+export const ProfilePicture = styled.Image`
+width:45px;
+height:45px;
+border-radius:100%;
+`
+
 export const HeaderAndExitView = styled.View`
 flex:1;
 align-items:center;
@@ -31,6 +37,12 @@ export const ProfilePictureView = styled.View`
 width: fit-content;
 `
 
+export const DefaultProfilePictureView = styled.View`
+padding: 10px;
+border-radius: 100%;
+background-color: ${theme.colors.red};
+`
+
 export const UsernameText = styled.Text`
 font-family:${theme.fonts.MontserratSemiBold};
 font-size:20px;
@@ -45,6 +57,10 @@ align-items:center;
 justify-content:center;
 `
 
+export const LocationIconView = styled.View`
+padding:6px;
+`
+
 export const InfoAndDownLoadView = styled.View`
 flex:0 1 auto;
 align-items:center;
@@ -53,7 +69,6 @@ padding:5px 0;
 flex-direction:row;
 width:100%;
 margin:10px 0;
-
 `
 
 export const DownLoadText = styled.Text`
@@ -61,6 +76,11 @@ color:${theme.colors.white};
 font-family:${theme.fonts.RobotoRegular};
 font-size:18px;
 margin: 0 10px;
+`
+
+export const DownloadIconView = styled.View`
+background-color: ${theme.colors.green_light_secondary};
+padding: 6px;
 `
 
 export const ImageInfoView = styled.View`

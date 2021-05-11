@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react'
-import { View, Animated, StyleSheet, Easing } from 'react-native'
+import React, { useEffect } from 'react'
+import { Animated, StyleSheet, Easing } from 'react-native'
 import theme from '../../themes'
 
 const styledBox = StyleSheet.create({

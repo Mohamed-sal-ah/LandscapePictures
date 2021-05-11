@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { screenName } from '../../navigation/routes'
 import { useNavigation } from '@react-navigation/native'
-import { Text, Image } from 'react-native'
+import { Text } from 'react-native'
 import { useAuth, databaseRef, storageRef, useDatabase } from '../../firebase'
 import { UserSvg } from '../../assets/'
 import 'react-native-get-random-values'
@@ -141,7 +141,7 @@ const SignUpScreen = () => {
                     <STYLED.ProfilePictureInputView style={{ minHeight: fileSelected !== '' ? 250 : 'auto' }}>
 
                         {fileSelected !== '' ?
-                            <Image style={{ width: 100, height: 100, borderRadius: 100 }} source={{ uri: fileSelected }} />
+                            <STYLED.ProfilePicture source={{ uri: fileSelected }} />
                             :
                             <STYLED.DefaultProfilePictureView>
                                 <UserSvg size={50} fillColor={theme.colors.white} />

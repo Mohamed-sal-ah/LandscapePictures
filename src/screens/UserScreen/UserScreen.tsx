@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { screenName } from '../../navigation/routes'
-import { View, Image } from 'react-native'
+import { View } from 'react-native'
 import useConnect from '../../hooks/useConnect'
 import NavigationBar from '../../components/NavigationBar'
 import ImageGallery from '../../components/ImageGallery';
@@ -50,16 +50,16 @@ const UserScreen = ({ route }: any) => {
         <STYLED.FullPage>
             <NavigationBar />
             {!loading &&
-                <View style={{ marginTop: 70, flex: 1, alignItems: 'center', justifyContent: 'flex-start', width: '100%' }}>
+                <STYLED.FullUserView>
                     <STYLED.UserInfoView
                         style={{
                             flexDirection: theme.fullWidth > 650 ? 'row' : 'column',
                         }}
                     >
                         {userPage.profilePicture ? <View>
-
-                            <Image style={{ width: 100, height: 100, borderRadius: 100 }} source={{ uri: userPage.profilePictureFile ? userPage.profilePictureFile : require(`../../storage/profileImage/${userPage.profilePicture}`) }} />
-
+                            <STYLED.ProfilePicture
+                                source={{ uri: userPage.profilePictureFile ? userPage.profilePictureFile : require(`../../storage/profileImage/${userPage.profilePicture}`) }}
+                            />
                         </View> : <STYLED.DefaultProfilePictureView>
                             <UserSvg size={50} fillColor={theme.colors.white} />
                         </STYLED.DefaultProfilePictureView>}
@@ -101,7 +101,7 @@ const UserScreen = ({ route }: any) => {
                         <ImageModal imageData={imageValues} onNavigateUser={onNavigateUser} closeImageModal={closeImageModal} />
                     </Modal>
                     <ImageGallery onNavigateUser={onNavigateUser} openImageModal={openImageModal} imagesArray={filtredImages} setOnAuth={false} />
-                </View>}
+                </STYLED.FullUserView>}
         </STYLED.FullPage>
     )
 }

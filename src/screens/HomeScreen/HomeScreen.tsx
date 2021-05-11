@@ -1,5 +1,4 @@
 import React, { useContext, useState, FC } from 'react'
-import { View } from 'react-native'
 import NavigationBar from '../../components/NavigationBar';
 import * as STYLED from './styled'
 import SearchBar from '../../components/SearchBar';
@@ -38,7 +37,7 @@ const HomeScreen: FC = () => {
     }
 
     return (
-        <View>
+        <STYLED.FullPage>
             <NavigationBar showSearchBar={false} />
             <STYLED.FullImageView>
                 <STYLED.HomePageImage accessibilityLabel={firstImage.hasOwnProperty('alt') ? firstImage.alt : `Photo by ${firstImage.username}`} source={{ uri: firstImage.fileName.startsWith('https') ? firstImage.fileName : require(`../../storage/images/${firstImage.fileName}`) }} />
@@ -100,7 +99,7 @@ const HomeScreen: FC = () => {
                 setOnAuth={false}
                 onNavigateUser={onNavigateUser}
             />
-        </View>
+        </STYLED.FullPage>
     )
 }
 

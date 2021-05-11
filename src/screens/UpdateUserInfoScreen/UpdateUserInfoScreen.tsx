@@ -1,5 +1,4 @@
 import React, { useRef, useState, useContext, useEffect } from 'react'
-import { Image } from 'react-native'
 import { UserSvg } from '../../assets/'
 import { DatabaseContext, useDatabase, storageRef, databaseRef } from '../../firebase'
 import * as STYLED from './styled'
@@ -25,7 +24,6 @@ const UpdateUserInfoScreen = () => {
     const [loading, setLoading] = useState(false)
     useEffect(() => {
         const unsubscribe = navigation.addListener('focus', () => {
-
             setLoading(false)
         })
         return unsubscribe
@@ -38,6 +36,7 @@ const UpdateUserInfoScreen = () => {
         const allUser = authUser
         allUser.user_info = user_info
         if (fileBlob !== '') {
+            // upload image and put in new user info
             const generateID = nanoid()
             const fileId = generateID + ".jpg"
             if (users[authUser.uid].profilePictureFile) {
@@ -68,6 +67,7 @@ const UpdateUserInfoScreen = () => {
 
             setFileBlob('')
         } else {
+            // put in new user info
             await databaseRef.userDatabase(authUser.uid).set({
                 ...allUser
             })
@@ -98,7 +98,7 @@ const UpdateUserInfoScreen = () => {
                     <STYLED.ProfilePictureInputView style={{ minHeight: fileSelected !== '' ? 250 : 'auto' }}>
 
                         {fileSelected !== '' ?
-                            <Image style={{ width: 100, height: 100, borderRadius: 100 }} source={{ uri: fileSelected }} />
+                            <STYLED.ProfilePicture source={{ uri: fileSelected }} />
                             :
                             <STYLED.DefaultProfilePictureView>
                                 <UserSvg size={50} fillColor={theme.colors.white} />
@@ -126,7 +126,11 @@ const UpdateUserInfoScreen = () => {
                     <STYLED.InputForm>
                         <STYLED.InputLabel>Change info about yourself:</STYLED.InputLabel>
                         <STYLED.UpdateInfoInputView style={{ minHeight: 100, justifyContent: 'flex-start' }}>
-                            <STYLED.UpdateInfoInput style={{ alignSelf: 'flex-start', paddingTop: 7, height: '100%' }} multiline={true} defaultValue={user_info} placeholderTextColor={theme.colors.gray.light} placeholder="Change small info" onChangeText={setUserInfo} />
+                            <STYLED.UpdateInfoInput style={{ alignSelf: 'flex-start', paddingTop: 7, height: '100%' }}
+                                multiline={true} defaultValue={user_info}
+                                placeholderTextColor={theme.colors.gray.light}
+                                placeholder="Change user info"
+                                onChangeText={setUserInfo} />
                         </STYLED.UpdateInfoInputView>
                     </STYLED.InputForm>
                     <STYLED.ButtonView>

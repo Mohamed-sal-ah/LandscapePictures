@@ -6,6 +6,12 @@ background-color:${theme.colors.white};
 min-height:100vh;
 `
 
+export const ProfilePicture = styled.Image`
+width:100px;
+height:100px;
+border-radius:100%;
+`
+
 export const FormSection = styled.View`
 text-align:center;
 flex:1;

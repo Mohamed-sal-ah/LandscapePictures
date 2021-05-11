@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect, useRef } from 'react'
-import { View, Text, Image } from 'react-native'
+import { View, Text } from 'react-native'
 import NavigationBar from '../../components/NavigationBar'
 import { DatabaseContext, useDatabase, storageRef, databaseRef } from '../../firebase'
 import { UserSvg } from '../../assets/'
@@ -34,7 +34,7 @@ const AccountScreen = () => {
     const authUser = useConnect((state) => state.auth.user)
     const dataContext = useContext(DatabaseContext)
     const { curentData }: any = dataContext
-    const { images, users } = curentData
+    const { images } = curentData
     const { deleteImage }: any = useDatabase()
     const [imageLoading, setImageLoading] = useState(true)
     const [profilePic, setProfilePic] = useState('')
@@ -81,12 +81,12 @@ const AccountScreen = () => {
             >
                 <DeleteModal onCancel={onCloseModal} onDelete={onDeleteOneImage} />
             </Modal>
-            <View style={{ marginTop: 70, flex: 1, alignItems: 'center', justifyContent: 'flex-start', width: '100%' }}>
+            <STYLED.FullAccountView>
                 {authUser ? <>
                     <STYLED.UserInfoView>
                         {authUser.profilePicture ? <View>
                             {!imageLoading && <>
-                                <Image style={{ width: 100, height: 100, borderRadius: 100 }} source={{ uri: profilePic }} />
+                                <STYLED.ProfilePicture source={{ uri: profilePic }} />
                             </>}
                         </View> : <STYLED.DefaultProfilePictureView>
                             <UserSvg size={50} fillColor={theme.colors.white} />
@@ -121,7 +121,7 @@ const AccountScreen = () => {
                             </STYLED.ButtonLink>}
                     </>
                 }
-            </View>
+            </STYLED.FullAccountView>
         </STYLED.FullPage>
     )
 }

@@ -21,6 +21,16 @@ height:100%;
 background-color:${theme.colors.gradient.regular};
 `
 
+export const DeleteButton = styled.TouchableOpacity`
+ background-color: ${theme.colors.red};
+position: absolute;
+border-radius: 5px;
+padding: 8px;
+margin-top: 5px;
+margin-right: 10px;
+right: 0;
+`
+
 export const SmallImageInfoView = styled.View`
 position:absolute;
 width:100%;
@@ -38,6 +48,18 @@ flex:1;
 flex-direction:row;
 justify-content:flex-start;
 align-items:center;
+`
+
+export const ProfilePicture = styled.Image`
+width:60px;
+height:60px;
+border-radius:100%;
+`
+
+export const DefaultProfilePictureView = styled.View`
+border-radius: 100%;
+padding:10px;
+background-color: ${theme.colors.red};
 `
 
 export const UsernameText = styled.Text`

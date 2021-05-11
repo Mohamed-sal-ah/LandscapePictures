@@ -8,7 +8,6 @@ import JsonData from '../data/index.json'
 
 export const DatabaseContext = React.createContext(null)
 
-
 export const useDatabase = () => {
     return useContext(DatabaseContext)
 }
@@ -23,6 +22,7 @@ export const DatabaseProvider = ({ children }: any) => {
         users: null
     })
     const fetchImages = (fullUsers: any) => {
+        // Fetch images
         const setJson = {
             images: JsonData.images,
             users: JsonData.users
@@ -67,6 +67,7 @@ export const DatabaseProvider = ({ children }: any) => {
     }
 
     useEffect(() => {
+        // Fetch users
         const setJson = {
             images: JsonData.images,
             users: JsonData.users
@@ -87,6 +88,7 @@ export const DatabaseProvider = ({ children }: any) => {
     }, [])
 
     const deleteImage = (filtredImages: any) => {
+        // Delete image
         setCurrentData({
             images: filtredImages,
             users: curentData.users
@@ -95,6 +97,7 @@ export const DatabaseProvider = ({ children }: any) => {
     }
 
     const updateInfo = (userInfo: any, user_id_key: any) => {
+        // update user info
         dispatch(actions.auth.setUserStatus({ ...userInfo }))
         const allUsers = curentData.users
         const restUsers = userInfo
@@ -113,6 +116,7 @@ export const DatabaseProvider = ({ children }: any) => {
         dispatch(actions.database.updateUserInfo(allUsers))
     }
     const addNewUser = (newUser: any) => {
+        // add new user
         const newObj = {
             ...curentData.users,
             ...newUser
@@ -125,6 +129,7 @@ export const DatabaseProvider = ({ children }: any) => {
     }
 
     const uploadImage = (data: any) => {
+        // upload image
         const newImages = [...curentData.images, { ...data }]
         setCurrentData({
             images: newImages,

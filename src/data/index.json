@@ -15,7 +15,7 @@
         {
             "date": 1618660446742,
             "description": "Mountains and valley floor forest",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid3",
             "username": "Max Maxsson",
             "alt": "Photo by Luke Pamer on Unsplash",
@@ -28,7 +28,7 @@
         {
             "date": 1618660446742,
             "description": "Snow coverd peekks",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid2",
             "username": "Jane Doe",
             "alt": "Photo by Andreas M on Unsplash",
@@ -40,7 +40,7 @@
         {
             "date": 1618660446742,
             "description": "Rocky Coastline",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid3",
             "username": "Max Maxsson",
             "alt": "Photo by Annie Spratt on Unsplash",
@@ -52,7 +52,7 @@
         {
             "date": 1618660446742,
             "description": "Snow covred forest",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid2",
             "username": "Jane Doe",
             "alt": "Photo by Adele Beausoleil on Unsplash",
@@ -65,7 +65,7 @@
         {
             "date": 1618660446742,
             "description": "Dry mountain",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid2",
             "username": "Jane Doe",
             "alt": "Photo by Adi Goldstein on Unsplash",
@@ -78,7 +78,7 @@
         {
             "date": 1618660446742,
             "description": "High cliffs to coastline",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid2",
             "username": "Jane Doe",
             "alt": "Photo by Ardian Lumi on Unsplash",
@@ -90,7 +90,7 @@
         {
             "date": 1618660446742,
             "description": "Beutiful cliffs",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid2",
             "username": "Jane Doe",
             "alt": "Photo by Brent Gorwin on Unsplash",
@@ -102,7 +102,7 @@
         {
             "date": 1618660446742,
             "description": "Green cliffs to the sea",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid2",
             "username": "Jane Doe",
             "alt": "Photo by Captureson Photography on Unsplash",
@@ -114,7 +114,7 @@
         {
             "date": 1618660446742,
             "description": "Sunlight through forest",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid2",
             "username": "Jane Doe",
             "alt": "Photo by Daniel Peters on Unsplash",
@@ -126,7 +126,7 @@
         {
             "date": 1618660446742,
             "description": "Day at the Rocky Beach",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid3",
             "username": "Max Maxsson",
             "alt": "Photo by Elizabeth French on Unsplash",
@@ -138,7 +138,7 @@
         {
             "date": 1618660446742,
             "description": "Forest Changing color",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid2",
             "username": "Jane Doe",
             "alt": "Photo by Federico Botttos on Unsplash",
@@ -150,7 +150,7 @@
         {
             "date": 1618660446742,
             "description": "Sunset at the coast",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid2",
             "username": "Jane Doe",
             "alt": "Photo by Guillermo Alvarez on Unsplash",
@@ -162,7 +162,7 @@
         {
             "date": 1618660446742,
             "description": "Sunlight through forest floor",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid2",
             "username": "Jane Doe",
             "alt": "Photo by Gustav Gullstrand on Unsplash",
@@ -174,7 +174,7 @@
         {
             "date": 1618660446742,
             "description": "Clear sky on rocky coast",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid2",
             "username": "Jane Doe",
             "alt": "Photo by Ian Schneider on Unsplash",
@@ -186,7 +186,7 @@
         {
             "date": 1618660446742,
             "description": "Glacier boundary",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid2",
             "username": "Jane Doe",
             "alt": "Photo by Jens Johnsson on Unsplash",
@@ -198,7 +198,7 @@
         {
             "date": 1618660446742,
             "description": "Windswept desert",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid1",
             "username": "John Doe",
             "alt": "Photo by Jeremy Bishop on Unsplash",
@@ -211,7 +211,7 @@
         {
             "date": 1618660446742,
             "description": "Light snow in the forest",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid3",
             "username": "Max Maxsson",
             "alt": "Photo by Jessica Fadel on Unsplash",
@@ -224,7 +224,7 @@
         {
             "date": 1618660446742,
             "description": "Small lake island with trees",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid1",
             "username": "John Doe",
             "alt": "Photo by Juan Davila on Unsplash",
@@ -236,7 +236,7 @@
         {
             "date": 1618660446742,
             "description": "Snowcoverd coastline",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid3",
             "username": "Max Maxsson",
             "alt": "Photo by Maria Pablo on Unsplash",
@@ -249,7 +249,7 @@
         {
             "date": 1618660446742,
             "description": "Sunrays through the forest",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid1",
             "username": "John Doe",
             "alt": "Photo by Maxx Gong on Unsplash",
@@ -261,7 +261,7 @@
         {
             "date": 1618660446742,
             "description": "Snow coverd mountains with trees",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid1",
             "username": "John Doe",
             "alt": "Photo by Michael Hacker on Unsplash",
@@ -275,7 +275,7 @@
         {
             "date": 1618660446742,
             "description": "Misty autumn forest",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid3",
             "username": "Max Maxsson",
             "alt": "Photo by Michael Krahn on Unsplash",
@@ -287,7 +287,7 @@
         {
             "date": 1618660446742,
             "description": "Glacier Landscape",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid1",
             "username": "John Doe",
             "alt": "Photo by NOAA on Unsplash",
@@ -299,7 +299,7 @@
         {
             "date": 1618660446742,
             "description": "Snow coverd mountains",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid2",
             "username": "Jane Doe",
             "alt": "Photo by Pascale Amez by on Unsplash",
@@ -312,7 +312,7 @@
         {
             "date": 1618660446742,
             "description": "Sunrise on the dunes",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid2",
             "username": "Jane Doe",
             "alt": "Photo by Amine M'Siouri on Pexels",
@@ -324,7 +324,7 @@
         {
             "date": 1618660446742,
             "description": "Iceland Aurora",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid3",
             "username": "Max Maxsson",
             "alt": "Photo by Benjamin Suter on Pexels",
@@ -336,7 +336,7 @@
         {
             "date": 1618660446742,
             "description": "Moon abouve the snow peaked mountains",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid2",
             "username": "Jane Doe",
             "alt": "Photo by Eberhard Grossgasteiger on Pexels",
@@ -349,7 +349,7 @@
         {
             "date": 1618660446742,
             "description": "Mountain peak",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid2",
             "username": "Jane Doe",
             "alt": "Photo by Eberhard Grossgasteiger on Pexels",
@@ -361,7 +361,7 @@
         {
             "date": 1618660446742,
             "description": "Misty mountains and forest",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid2",
             "username": "Jane Doe",
             "alt": "Photo by Eberhard Grossgasteiger on Pexels",
@@ -374,7 +374,7 @@
         {
             "date": 1618660446742,
             "description": "Mountains beyond lake",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid2",
             "username": "Jane Doe",
             "alt": "Photo by Marlon Martinez on Pexels",
@@ -386,7 +386,7 @@
         {
             "date": 1618660446742,
             "description": "Forest on the lake with mountains behind",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid3",
             "username": "Max Maxsson",
             "alt": "Photo by Philip Ackermann on Pexels",
@@ -399,7 +399,7 @@
         {
             "date": 1618660446742,
             "description": "Forest coved in mist",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid2",
             "username": "Jane Doe",
             "alt": "Photo by Lumn on Pexels",
@@ -411,7 +411,7 @@
         {
             "date": 1618660446742,
             "description": "Floating iceberg",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid2",
             "username": "Jane Doe",
             "alt": "Photo by Pixabay on Pexels",
@@ -423,7 +423,7 @@
         {
             "date": 1618660446742,
             "description": "Snow covered mountains",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid1",
             "username": "John Doe",
             "alt": "Photo by Sandy on Pexels",
@@ -436,7 +436,7 @@
         {
             "date": 1618660446742,
             "description": "Snow covered peaks",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid3",
             "username": "Max Maxsson",
             "alt": "Photo by Trace Hudson by on Pexels",
@@ -449,7 +449,7 @@
         {
             "date": 1618660446742,
             "description": "large iceberg floats away from glacier",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid1",
             "username": "John Doe",
             "alt": "Photo by Rodri Caruso on Unsplash",
@@ -461,7 +461,7 @@
         {
             "date": 1618660446742,
             "description": "Landscape with trees and mountains in background",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid1",
             "username": "John Doe",
             "alt": "Photo by Sergei Akulich by on Unsplash",
@@ -487,7 +487,7 @@
         {
             "date": 1618660446742,
             "description": "Steep coastline",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid3",
             "username": "Max Maxsson",
             "alt": "Photo by Thom Holmes by on Unsplash",
@@ -499,7 +499,7 @@
         {
             "date": 1618660446742,
             "description": "Glaciers and mountains",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid3",
             "username": "Max Maxsson",
             "alt": "Photo by Vince Gx by on Unsplash",
@@ -512,7 +512,7 @@
         {
             "date": 1618660446742,
             "description": "Beautiful peaks",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid1",
             "username": "John Doe",
             "alt": "Photo by Zo Razafindramamba on Unsplash",
@@ -524,7 +524,7 @@
         {
             "date": 1618660446742,
             "description": "Peaks beyond the grass",
-            "location": "lorem ",
+            "location": "Unknown",
             "user_id": "userid1",
             "username": "John Doe",
             "alt": "Photo by Andreas M on Unsplash",
@@ -661,21 +661,21 @@
             "username": "John Doe",
             "profilePicture": "jeremy-bishop-2e3hgvDnCpM-unsplash.jpg",
             "collections": [],
-            "user_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus id urna in lobortis."
+            "user_info": "Hi i love to travel and take pictures of the sight that i see."
         },
         "userid2": {
             "email": "test2@test2.com",
             "username": "Jane Doe",
             "profilePicture": "pexels-pixabay-53389.jpg",
             "collections": [],
-            "user_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus id urna in lobortis."
+            "user_info": "Explore my Travel photos around the world"
         },
         "userid3": {
             "email": "test3@test3.com",
             "username": "Max Maxsson",
             "profilePicture": "matthew-smith-VNsGywdphUY-unsplash.jpg",
             "collections": [],
-            "user_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus id urna in lobortis."
+            "user_info": "Hello i have an intress in taking nature photos"
         }
     }
 }

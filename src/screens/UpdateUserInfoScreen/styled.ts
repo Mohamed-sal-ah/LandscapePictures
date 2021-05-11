@@ -8,6 +8,12 @@ align-items:center;
 justify-content:center;
 `
 
+export const ProfilePicture = styled.Image`
+width:100px;
+height:100px;
+border-radius:100%;
+`
+
 export const FullTitle = styled.Text`
 font-family:${theme.fonts.BaumansRegular};
 font-size:40px;

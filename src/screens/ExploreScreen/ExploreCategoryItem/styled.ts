@@ -10,6 +10,11 @@ border-radius:10px;
 overflow:hidden;
 `
 
+export const ExploreCategoryImage = styled.Image`
+width:100%;
+height:100%;
+`
+
 export const GradiantItem = styled.View`
 position:absolute;
 width:100%;
