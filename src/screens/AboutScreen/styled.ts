@@ -7,7 +7,7 @@ background-color:${theme.colors.white};
 `
 
 export const FullAboutView = styled.View`
-margin-top: 70;
+margin-top: 70px;
 height: fit-content;
 `
 
@@ -37,7 +37,6 @@ text-align:center;
 export const SubTitle = styled.Text`
 font-family:${theme.fonts.MontserratRegular};
 font-size:35px;
-margin:10px 0;
 color:${theme.colors.green_primary};
 text-align:center;
 `
