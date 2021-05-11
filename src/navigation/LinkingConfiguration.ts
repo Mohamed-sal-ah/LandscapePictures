@@ -4,7 +4,6 @@ export default {
   config: {
     screens: {
       Home: screenRoute.HOME,
-      NotFound: screenRoute.NOT_FOUND,
       About: screenRoute.ABOUT,
       Category: screenRoute.CATEGORY,
       Explore: screenRoute.EXPLORE,

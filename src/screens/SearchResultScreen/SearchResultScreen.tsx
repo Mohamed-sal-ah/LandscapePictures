@@ -35,7 +35,7 @@ const SearchResultScreen = ({ route }: any) => {
     }
     useEffect(() => {
         if (route.params) {
-            const newKey = ["description", "location", "category"]
+            const newKey = ["description", "location", "category", "username"]
             const filterArray = images.filter((item: any, index: number) => newKey.some(k => {
                 if (k === "category") {
                     const returnValue = item[k].filter((category: any) => category.toLowerCase().includes(route.params.search.toLowerCase()))

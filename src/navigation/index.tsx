@@ -42,7 +42,6 @@ function RootNavigator() {
       <Stack.Screen name={screenName.CATEGORY} component={CategoryScreen} options={({ route }: RouteProp) => ({ title: route.params.category })} />
       <Stack.Screen name={screenName.LOGIN_STACK} component={LoginStack} />
       <Stack.Screen name={screenName.USER_STACK} component={OnAuthStack} />
-      <Stack.Screen name={screenName.NOT_FOUND} component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>
   );
 }

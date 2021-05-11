@@ -1,5 +1,4 @@
 export enum screenRoute {
-    NOT_FOUND = '*',
     HOME = '/',
     CATEGORY = '/category/*',
     USER = '/user/*',
