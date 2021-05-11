@@ -1,9 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
-import NotFoundScreen from '../screens/NotFoundScreen';
 import { screenName, OnAuthScreenName, LoginScreenName } from './routes'
-import LinkingConfiguration from './LinkingConfiguration';
 import HomeScreen from '../screens/HomeScreen';
 import SignInScreen from '../screens/SignInScreen';
 import SignUpScreen from '../screens/SignUpScreen';
