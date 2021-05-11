@@ -23,7 +23,7 @@ const objectText = [
     {
         category: "Mountains",
         title: "Mountains",
-        text: "See the beutififul mountains"
+        text: "See the beautiful mountains"
     },
     {
         category: "Snow And Ice",
@@ -38,7 +38,7 @@ const objectText = [
     {
         category: "Grasslands",
         title: "Grasslands",
-        text: "See the Beuftiful flat grasslands"
+        text: "See the beautiful flat grasslands"
     }
 ]
 
