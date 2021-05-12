@@ -6,7 +6,6 @@ flex: 1;
 justify-content: center;
 align-items: center;
 padding:20px;
-height:100%;
 `
 
 export const ProfilePicture = styled.Image`
