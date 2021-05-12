@@ -2,7 +2,8 @@ import styled from 'styled-components/native'
 import theme from '../../themes'
 
 export const FullPage = styled.View`
-height:100%;
+flex:1;
+align-items:center;
 background-color:${theme.colors.white};
 `
 

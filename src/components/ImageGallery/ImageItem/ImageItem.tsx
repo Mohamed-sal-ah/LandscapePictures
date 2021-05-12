@@ -5,10 +5,10 @@ import theme from '../../../themes';
 import * as STYLED from './styled'
 import { useHover } from 'react-native-web-hooks';
 import { XmarkSvg, UserSvg, ArrowDownSvg } from '../../../assets/index'
-import useConnect from '../../../hooks/useConnect'
 
 type Props = {
     fullWidth: number,
+    users: any,
     oneImage: any,
     setOnAuth: any,
     onDeleteImage: any,
@@ -16,10 +16,9 @@ type Props = {
     openImageModal: any,
 }
 
-const ImageItem: FC<Props> = ({ fullWidth, oneImage, setOnAuth, onDeleteImage = null, onNavigateUser = null, openImageModal = null }: any) => {
+const ImageItem: FC<Props> = ({ fullWidth, users, oneImage, setOnAuth, onDeleteImage = null, onNavigateUser = null, openImageModal = null }: any) => {
     const ref = useRef(null);
     const isHovered = useHover(ref);
-    const { users } = useConnect((state) => state.data)
     const onPressUser = (e: any) => {
         e.stopPropagation()
         onNavigateUser(oneImage.user_id, oneImage.username)
