@@ -89,7 +89,8 @@ const UserScreen = ({ route }: any) => {
                                 height: theme.fullWidth > 650 ? 'fit-content' : '100%',
                                 padding: 0,
                                 borderRadius: theme.fullWidth > 650 ? 4 : 0,
-
+                                display: 'flex',
+                                alignItems: 'center',
                             },
                             overlay: {
                                 backgroundColor: theme.colors.gradient.regular
