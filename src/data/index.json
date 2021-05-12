@@ -39,104 +39,6 @@
         },
         {
             "date": 1618660446742,
-            "description": "Rocky Coastline",
-            "location": "Unknown",
-            "user_id": "userid3",
-            "username": "Max Maxsson",
-            "alt": "Photo by Annie Spratt on Unsplash",
-            "fileName": "annie-spratt-7mPvQCiNiLc-unsplash.jpg",
-            "category": [
-                "Coast"
-            ]
-        },
-        {
-            "date": 1618660446742,
-            "description": "Snow covred forest",
-            "location": "Unknown",
-            "user_id": "userid2",
-            "username": "Jane Doe",
-            "alt": "Photo by Adele Beausoleil on Unsplash",
-            "fileName": "adele-beausoleil-mcxROJotfpc-unsplash.jpg",
-            "category": [
-                "Forest",
-                "Snow And Ice"
-            ]
-        },
-        {
-            "date": 1618660446742,
-            "description": "Dry mountain",
-            "location": "Unknown",
-            "user_id": "userid2",
-            "username": "Jane Doe",
-            "alt": "Photo by Adi Goldstein on Unsplash",
-            "fileName": "adi-goldstein-uuod6IM8Cs8-unsplash.jpg",
-            "category": [
-                "Desert",
-                "Mountains"
-            ]
-        },
-        {
-            "date": 1618660446742,
-            "description": "High cliffs to coastline",
-            "location": "Unknown",
-            "user_id": "userid2",
-            "username": "Jane Doe",
-            "alt": "Photo by Ardian Lumi on Unsplash",
-            "fileName": "ardian-lumi-wF_xsT_O17w-unsplash.jpg",
-            "category": [
-                "Coast"
-            ]
-        },
-        {
-            "date": 1618660446742,
-            "description": "Beutiful cliffs",
-            "location": "Unknown",
-            "user_id": "userid2",
-            "username": "Jane Doe",
-            "alt": "Photo by Brent Gorwin on Unsplash",
-            "fileName": "brent-gorwin-Jd-3Zen8rSI-unsplash.jpg",
-            "category": [
-                "Coast"
-            ]
-        },
-        {
-            "date": 1618660446742,
-            "description": "Green cliffs to the sea",
-            "location": "Unknown",
-            "user_id": "userid2",
-            "username": "Jane Doe",
-            "alt": "Photo by Captureson Photography on Unsplash",
-            "fileName": "captureson-photography-OGZPpeJLzg0-unsplash.jpg",
-            "category": [
-                "Coast"
-            ]
-        },
-        {
-            "date": 1618660446742,
-            "description": "Sunlight through forest",
-            "location": "Unknown",
-            "user_id": "userid2",
-            "username": "Jane Doe",
-            "alt": "Photo by Daniel Peters on Unsplash",
-            "fileName": "daniel-peters-2tvkoVK8prc-unsplash.jpg",
-            "category": [
-                "Forest"
-            ]
-        },
-        {
-            "date": 1618660446742,
-            "description": "Day at the Rocky Beach",
-            "location": "Unknown",
-            "user_id": "userid3",
-            "username": "Max Maxsson",
-            "alt": "Photo by Elizabeth French on Unsplash",
-            "fileName": "elizabeth-french-Q_FWZwDonf8-unsplash.jpg",
-            "category": [
-                "Coast"
-            ]
-        },
-        {
-            "date": 1618660446742,
             "description": "Forest Changing color",
             "location": "Unknown",
             "user_id": "userid2",
@@ -145,18 +47,6 @@
             "fileName": "federico-bottos-Z3NceSeZqgI-unsplash.jpg",
             "category": [
                 "Forest"
-            ]
-        },
-        {
-            "date": 1618660446742,
-            "description": "Sunset at the coast",
-            "location": "Unknown",
-            "user_id": "userid2",
-            "username": "Jane Doe",
-            "alt": "Photo by Guillermo Alvarez on Unsplash",
-            "fileName": "guillermo-alvarez-oP5aJ1GfWSU-unsplash.jpg",
-            "category": [
-                "Coast"
             ]
         },
         {
@@ -173,30 +63,6 @@
         },
         {
             "date": 1618660446742,
-            "description": "Clear sky on rocky coast",
-            "location": "Unknown",
-            "user_id": "userid2",
-            "username": "Jane Doe",
-            "alt": "Photo by Ian Schneider on Unsplash",
-            "fileName": "ian-schneider-XJfHMPJ0e-g-unsplash.jpg",
-            "category": [
-                "Coast"
-            ]
-        },
-        {
-            "date": 1618660446742,
-            "description": "Glacier boundary",
-            "location": "Unknown",
-            "user_id": "userid2",
-            "username": "Jane Doe",
-            "alt": "Photo by Jens Johnsson on Unsplash",
-            "fileName": "jens-johnsson-Tf_wc1GNj3M-unsplash.jpg",
-            "category": [
-                "Mountains"
-            ]
-        },
-        {
-            "date": 1618660446742,
             "description": "Windswept desert",
             "location": "Unknown",
             "user_id": "userid1",
@@ -206,19 +72,6 @@
             "category": [
                 "Desert",
                 "Mountains"
-            ]
-        },
-        {
-            "date": 1618660446742,
-            "description": "Light snow in the forest",
-            "location": "Unknown",
-            "user_id": "userid3",
-            "username": "Max Maxsson",
-            "alt": "Photo by Jessica Fadel on Unsplash",
-            "fileName": "jessica-fadel-JGbyIJi9ybs-unsplash.jpg",
-            "category": [
-                "Forest",
-                "Snow And Ice"
             ]
         },
         {
@@ -248,44 +101,6 @@
         },
         {
             "date": 1618660446742,
-            "description": "Sunrays through the forest",
-            "location": "Unknown",
-            "user_id": "userid1",
-            "username": "John Doe",
-            "alt": "Photo by Maxx Gong on Unsplash",
-            "fileName": "maxx-gong-uwLXzP9U9w4-unsplash.jpg",
-            "category": [
-                "Forest"
-            ]
-        },
-        {
-            "date": 1618660446742,
-            "description": "Snow coverd mountains with trees",
-            "location": "Unknown",
-            "user_id": "userid1",
-            "username": "John Doe",
-            "alt": "Photo by Michael Hacker on Unsplash",
-            "fileName": "michael-hacker-OoQKL4cLZuc-unsplash.jpg",
-            "category": [
-                "Mountains",
-                "Snow And Ice",
-                "Forest"
-            ]
-        },
-        {
-            "date": 1618660446742,
-            "description": "Misty autumn forest",
-            "location": "Unknown",
-            "user_id": "userid3",
-            "username": "Max Maxsson",
-            "alt": "Photo by Michael Krahn on Unsplash",
-            "fileName": "michael-krahn-eRYgOXA9Ymc-unsplash.jpg",
-            "category": [
-                "Forest"
-            ]
-        },
-        {
-            "date": 1618660446742,
             "description": "Glacier Landscape",
             "location": "Unknown",
             "user_id": "userid1",
@@ -307,18 +122,6 @@
             "category": [
                 "Mountains",
                 "Snow And Ice"
-            ]
-        },
-        {
-            "date": 1618660446742,
-            "description": "Sunrise on the dunes",
-            "location": "Unknown",
-            "user_id": "userid2",
-            "username": "Jane Doe",
-            "alt": "Photo by Amine M'Siouri on Pexels",
-            "fileName": "pexels-amine-m'siouri-2097442.jpg",
-            "category": [
-                "Desert"
             ]
         },
         {
@@ -348,56 +151,6 @@
         },
         {
             "date": 1618660446742,
-            "description": "Mountain peak",
-            "location": "Unknown",
-            "user_id": "userid2",
-            "username": "Jane Doe",
-            "alt": "Photo by Eberhard Grossgasteiger on Pexels",
-            "fileName": "pexels-eberhard-grossgasteiger-1366919.jpg",
-            "category": [
-                "Mountains"
-            ]
-        },
-        {
-            "date": 1618660446742,
-            "description": "Misty mountains and forest",
-            "location": "Unknown",
-            "user_id": "userid2",
-            "username": "Jane Doe",
-            "alt": "Photo by Eberhard Grossgasteiger on Pexels",
-            "fileName": "pexels-eberhard-grossgasteiger-3389536.jpg",
-            "category": [
-                "Mountains",
-                "Forest"
-            ]
-        },
-        {
-            "date": 1618660446742,
-            "description": "Mountains beyond lake",
-            "location": "Unknown",
-            "user_id": "userid2",
-            "username": "Jane Doe",
-            "alt": "Photo by Marlon Martinez on Pexels",
-            "fileName": "pexels-marlon-martinez-1450082.jpg",
-            "category": [
-                "Mountains"
-            ]
-        },
-        {
-            "date": 1618660446742,
-            "description": "Forest on the lake with mountains behind",
-            "location": "Unknown",
-            "user_id": "userid3",
-            "username": "Max Maxsson",
-            "alt": "Photo by Philip Ackermann on Pexels",
-            "fileName": "pexels-philip-ackermann-1666021.jpg",
-            "category": [
-                "Mountains",
-                "Forest"
-            ]
-        },
-        {
-            "date": 1618660446742,
             "description": "Forest coved in mist",
             "location": "Unknown",
             "user_id": "userid2",
@@ -418,57 +171,6 @@
             "fileName": "pexels-pixabay-53389.jpg",
             "category": [
                 "Snow And Ice"
-            ]
-        },
-        {
-            "date": 1618660446742,
-            "description": "Snow covered mountains",
-            "location": "Unknown",
-            "user_id": "userid1",
-            "username": "John Doe",
-            "alt": "Photo by Sandy on Pexels",
-            "fileName": "pexels-sandy-140234.jpg",
-            "category": [
-                "Mountains",
-                "Snow And Ice"
-            ]
-        },
-        {
-            "date": 1618660446742,
-            "description": "Snow covered peaks",
-            "location": "Unknown",
-            "user_id": "userid3",
-            "username": "Max Maxsson",
-            "alt": "Photo by Trace Hudson by on Pexels",
-            "fileName": "pexels-trace-hudson-2365457.jpg",
-            "category": [
-                "Mountains",
-                "Snow And Ice"
-            ]
-        },
-        {
-            "date": 1618660446742,
-            "description": "large iceberg floats away from glacier",
-            "location": "Unknown",
-            "user_id": "userid1",
-            "username": "John Doe",
-            "alt": "Photo by Rodri Caruso on Unsplash",
-            "fileName": "rodri-caruso-BOj8Py1IcbU-unsplash.jpg",
-            "category": [
-                "Snow And Ice"
-            ]
-        },
-        {
-            "date": 1618660446742,
-            "description": "Landscape with trees and mountains in background",
-            "location": "Unknown",
-            "user_id": "userid1",
-            "username": "John Doe",
-            "alt": "Photo by Sergei Akulich by on Unsplash",
-            "fileName": "sergei-akulich-heLWtuAN3c-unsplash.jpg",
-            "category": [
-                "Forest",
-                "Mountains"
             ]
         },
         {
@@ -498,37 +200,12 @@
         },
         {
             "date": 1618660446742,
-            "description": "Glaciers and mountains",
-            "location": "Unknown",
-            "user_id": "userid3",
-            "username": "Max Maxsson",
-            "alt": "Photo by Vince Gx by on Unsplash",
-            "fileName": "vince-gx-tGtwSGyY8Lk-unsplash.jpg",
-            "category": [
-                "Mountains",
-                "Snow And Ice"
-            ]
-        },
-        {
-            "date": 1618660446742,
             "description": "Beautiful peaks",
             "location": "Unknown",
             "user_id": "userid1",
             "username": "John Doe",
             "alt": "Photo by Zo Razafindramamba on Unsplash",
             "fileName": "zo-razafindramamba-H7pP1T-f62k-unsplash.jpg",
-            "category": [
-                "Mountains"
-            ]
-        },
-        {
-            "date": 1618660446742,
-            "description": "Peaks beyond the grass",
-            "location": "Unknown",
-            "user_id": "userid1",
-            "username": "John Doe",
-            "alt": "Photo by Andreas M on Unsplash",
-            "fileName": "andreas-m-q-4953SkCqY-unsplash.jpg",
             "category": [
                 "Mountains"
             ]
@@ -584,18 +261,6 @@
         },
         {
             "date": 1618660446742,
-            "description": "Loney tree in a feild of red flowers",
-            "user_id": "userid3",
-            "location": "California",
-            "username": "Max Maxsson",
-            "alt": "Photo by Abdessamad Lotfi on Unsplash",
-            "fileName": "abdessamad-lotfi-qhV_9of6Rrc-unsplash.jpg",
-            "category": [
-                "Grasslands"
-            ]
-        },
-        {
-            "date": 1618660446742,
             "description": "Loney tree in african savannah",
             "user_id": "userid3",
             "location": "Kenya",
@@ -620,36 +285,12 @@
         },
         {
             "date": 1618660446742,
-            "description": "Blooming flowers filed in the forest",
-            "user_id": "userid3",
-            "location": "British Colombia",
-            "username": "Max Maxsson",
-            "alt": "Photo by Shawn on Unsplash",
-            "fileName": "shawn-1UVyiSSR-mg-unsplash.jpg",
-            "category": [
-                "Grasslands",
-                "Forest"
-            ]
-        },
-        {
-            "date": 1618660446742,
             "description": "Feild of rapeseed flowes",
             "user_id": "userid3",
             "location": "Europe",
             "username": "Max Maxsson",
             "alt": "Photo by Szabolcs Toth on Unsplash",
             "fileName": "szabolcs-toth-uMo-M14gmZc-unsplash.jpg",
-            "category": [
-                "Grasslands"
-            ]
-        },
-        {
-            "date": 1618660446742,
-            "fileName": "vadim-karnakhin-KmrkQRSsAIM-unsplash.jpg",
-            "description": "Grasslands with scattering trees",
-            "user_id": "userid3",
-            "location": "Europe",
-            "username": "Max Maxsson",
             "category": [
                 "Grasslands"
             ]
