@@ -1,4 +1,4 @@
-import React, { useState, } from 'react'
+import React, { useState, useEffect } from 'react'
 import { TouchableOpacity } from 'react-native'
 import theme from '../../themes'
 import * as STYLED from './styled'
@@ -19,6 +19,13 @@ const NavigationBar = ({ showSearchBar = true, searchResult = '' }: Partial<Prop
     const navigation = useNavigation()
     const { signOut }: any = useAuth()
     const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [])
     const handleScroll = () => {
         const offset = window.scrollY;
 
