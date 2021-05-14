@@ -6,6 +6,7 @@
                 "description": "description of image",
                 "location": "location of image taken ",
                 "user_id": "id for user",
+                "fileUrl": "url of file",
                 "fileName": "name of image file",
                 "category": "array of string category",
                 "username": "username"
