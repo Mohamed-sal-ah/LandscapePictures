@@ -40,7 +40,7 @@ const HomeScreen: FC = () => {
         <STYLED.FullPage>
             <NavigationBar showSearchBar={false} />
             <STYLED.FullImageView>
-                <STYLED.HomePageImage accessibilityLabel={firstImage.hasOwnProperty('alt') ? firstImage.alt : `Photo by ${firstImage.username}`} source={{ uri: firstImage.fileName.startsWith('https') ? firstImage.fileName : require(`../../storage/images/${firstImage.fileName}`) }} />
+                <STYLED.HomePageImage accessibilityLabel={firstImage.hasOwnProperty('alt') ? firstImage.alt : `Photo by ${firstImage.username}`} source={{ uri: firstImage.hasOwnProperty('fileUrl') ? firstImage.fileUrl : require(`../../storage/images/${firstImage.fileName}`) }} />
                 <STYLED.CenterPositionView style={{ justifyContent: theme.fullWidth > 650 ? 'center' : 'flex-end' }}>
                     <STYLED.BackgroundView style={{
                         borderRadius: theme.fullWidth > 650 ? 15 : 0,

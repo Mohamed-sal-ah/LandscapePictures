@@ -64,7 +64,7 @@ const AccountScreen = () => {
         setBoolModal(false)
         const imagesFiltred = images.filter((image: any) => image.fileName !== imageDelete.fileName)
         databaseRef.imagesFileDatabase().child(`/${imageDelete.keyValue}`).remove().then(() => {
-            storageRef.imagesStorage().child(`/${imageDelete.url_id}`).delete().then(() => {
+            storageRef.imagesStorage().child(`/${imageDelete.fileName}`).delete().then(() => {
                 deleteImage(imagesFiltred)
             })
         })

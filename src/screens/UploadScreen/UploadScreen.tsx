@@ -99,20 +99,21 @@ const UploadScreen = () => {
                 setDescription('')
                 setSelectCategory('')
                 uploadTask.snapshot.ref.getDownloadURL().then((downloadURL: any) => {
-                    uploadImage({ user_id: allUser.uid, fileName: downloadURL, description, location, username: allUser.username, date: Date.now() })
+                    uploadImage({ user_id: allUser.uid, fileUrl: downloadURL, fileName: fileId, description, location, username: allUser.username, date: Date.now() })
+                    databaseRef.imagesFileDatabase().push({
+                        user_id: allUser.uid,
+                        fileName: fileId,
+                        fileUrl: downloadURL,
+                        description,
+                        location,
+                        username: allUser.username,
+                        category,
+                        date: Date.now()
+
+                    })
                 });
             }
         );
-        await databaseRef.imagesFileDatabase().push({
-            user_id: allUser.uid,
-            fileName: fileId,
-            description,
-            location,
-            username: allUser.username,
-            category,
-            date: Date.now()
-
-        })
     }
     const setDisabled = selectCategory.length === 0 && location === '' && description === ''
     return (

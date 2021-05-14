@@ -103,12 +103,11 @@ margin-top: 10px;
 `
 
 export const InputView = styled.View`
-flex:1;
+flex:1 ;
 align-items:center;
 flex-direction:column;
 justify-content:flex-start;
 width:100%;
-flex:1;
 `
 
 export const DetailsImageInputView = styled.View`
@@ -136,7 +135,7 @@ outline-width:0 !important;
 `
 
 export const ButtonView = styled.View`
-max-height: 36px;
+min-height: 40px;
 height:fit-content;
 flex:1;
 flex-direction:row;

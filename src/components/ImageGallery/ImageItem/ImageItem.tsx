@@ -51,7 +51,7 @@ const ImageItem: FC<Props> = ({ fullWidth, users, oneImage, setOnAuth, onDeleteI
                 height={500}
                 accessibilityLabel={oneImage.hasOwnProperty('alt') ? oneImage.alt : `Photo by ${oneImage.username}`}
                 style={{ minWidth: '100%', minHeight: 300 }}
-                source={{ uri: oneImage.fileName.startsWith('https') ? oneImage.fileName : require(`../../../storage/images/${oneImage.fileName}`) }}
+                source={{ uri: oneImage.hasOwnProperty('fileUrl') ? oneImage.fileUrl : require(`../../../storage/images/${oneImage.fileName}`) }}
             />
             <STYLED.GradientImageView
                 style={fullWidth > 650 ? [isHovered && styles.hover] : { display: 'none' }}
@@ -94,8 +94,8 @@ const ImageItem: FC<Props> = ({ fullWidth, users, oneImage, setOnAuth, onDeleteI
                             borderRadius: '5px',
                         }}
                             onClick={(e: any) => e.stopPropagation()}
-                            href={oneImage.fileName.startsWith('https') ? oneImage.fileName : require(`../../../storage/images/${oneImage.fileName}`)}
-                            download={oneImage.fileName.startsWith('https') ? `${oneImage.username}_${oneImage.url_id}` : `${oneImage.username}_${oneImage.fileName}`}
+                            href={oneImage.hasOwnProperty('fileUrl') ? oneImage.fileUrl : require(`../../../storage/images/${oneImage.fileName}`)}
+                            download={oneImage.hasOwnProperty('fileUrl') ? `${oneImage.username}_${oneImage.fileName}` : `${oneImage.username}_${oneImage.fileName}`}
                         >
                             <ArrowDownSvg fillColor={theme.colors.gray.dark} />
                         </a>
@@ -121,8 +121,8 @@ const ImageItem: FC<Props> = ({ fullWidth, users, oneImage, setOnAuth, onDeleteI
                     marginLeft: '10px'
                 }}
                     onClick={(e: any) => e.stopPropagation()}
-                    href={oneImage.fileName.startsWith('https') ? oneImage.fileName : require(`../../../storage/images/${oneImage.fileName}`)}
-                    download={oneImage.fileName.startsWith('https') ? `${oneImage.username}_${oneImage.url_id}` : `${oneImage.username}_${oneImage.fileName}`}
+                    href={oneImage.hasOwnProperty('fileUrl') ? oneImage.fileUrl : require(`../../../storage/images/${oneImage.fileName}`)}
+                    download={oneImage.hasOwnProperty('fileUrl') ? `${oneImage.username}_${oneImage.url_id}` : `${oneImage.username}_${oneImage.fileName}`}
                 >
                     <ArrowDownSvg fillColor={theme.colors.gray.dark} />
                 </a>

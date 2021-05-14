@@ -32,29 +32,17 @@ export const DatabaseProvider = ({ children }: any) => {
             if (snapshot.val()) {
                 const imageValues = Object.values(snapshot.val())
                 const keyValues = Object.keys(snapshot.val())
-                const fileID = imageValues.map((item: any) => item.fileName)
-                const files = fileID.map((item: any) => {
-                    return imagesStorage().child(item).getDownloadURL()
+                const newObj = imageValues.map((item: any, index: any) => ({
+                    ...item,
+                    keyValue: keyValues[index]
+                }))
+                fullImages = [...setJson.images, ...newObj]
+                dispatch(actions.database.fetchDatabase({ images: fullImages, users: fullUsers }))
+                setCurrentData({
+                    images: fullImages,
+                    users: fullUsers
                 })
-                Promise.all(files)
-                    .then(urls => {
-                        const newObj = imageValues.map((item: any, index: any) => ({
-                            ...item,
-                            fileName: urls[index],
-                            url_id: fileID[index],
-                            keyValue: keyValues[index]
-                        }))
-                        fullImages = [...setJson.images, ...newObj]
-                        dispatch(actions.database.fetchDatabase({ images: fullImages, users: fullUsers }))
-                        setCurrentData({
-                            images: fullImages,
-                            users: fullUsers
-                        })
-                    }).then(() => {
-                        setLoading(false)
-                    }).catch((error: any) => {
-                        console.error(error)
-                    })
+                setLoading(false)
             } else {
                 dispatch(actions.database.fetchDatabase({ images: setJson.images, users: fullUsers }))
                 setCurrentData({

@@ -52,7 +52,7 @@ const ImageModal: FC<Props> = ({ closeImageModal, onNavigateUser, imageData }) =
                     height={(Math.floor(theme.fullHeight * 0.7) % 2 == 0 ? Math.floor(theme.fullHeight * 0.7) : Math.floor(theme.fullHeight * 0.7) + 1)}
                     style={{ paddingBottom: 20 }}
                     accessibilityLabel={imageData.hasOwnProperty('alt') ? imageData.alt : `Photo by ${imageData.username}`}
-                    source={{ uri: imageData.fileName.startsWith('https') ? imageData.fileName : require(`../../storage/images/${imageData.fileName}`) }} />
+                    source={{ uri: imageData.hasOwnProperty('fileUrl') ? imageData.fileUrl : require(`../../storage/images/${imageData.fileName}`) }} />
                 <STYLED.InfoAndDownLoadView>
                     <STYLED.ImageInfoView>
                         <STYLED.LoactionView>
@@ -76,8 +76,8 @@ const ImageModal: FC<Props> = ({ closeImageModal, onNavigateUser, imageData }) =
                             overflow: 'hidden',
                             textDecoration: 'none'
                         }}
-                        href={imageData.fileName.startsWith('https') ? imageData.fileName : require(`../../storage/images/${imageData.fileName}`)}
-                        download={imageData.fileName.startsWith('https') ? `${imageData.username}_${imageData.url_id}` : `${imageData.username}_${imageData.fileName}`}
+                        href={imageData.hasOwnProperty('fileUrl') ? imageData.fileUrl : require(`../../storage/images/${imageData.fileName}`)}
+                        download={imageData.hasOwnProperty('fileUrl') ? `${imageData.username}_${imageData.url_id}` : `${imageData.username}_${imageData.fileName}`}
 
                     >
                         <STYLED.DownLoadText>Download</STYLED.DownLoadText>
