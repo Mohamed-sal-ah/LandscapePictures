@@ -110,8 +110,6 @@ const UploadScreen = () => {
                         date: Date.now()
 
                     }).then((snap) => {
-                        console.log(snap.key);
-
                         uploadImage({ keyValue: snap.key, user_id: allUser.uid, fileUrl: downloadURL, fileName: fileId, description, location, username: allUser.username, date: Date.now() })
                     })
 

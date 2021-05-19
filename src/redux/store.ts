@@ -1,14 +1,22 @@
 import { applyMiddleware, compose, createStore } from 'redux'
+import { Platform } from 'react-native'
 import { persistStore } from 'redux-persist'
 import thunk from 'redux-thunk'
 import rootReducer from './reducers'
 const inizialState: any = {}
 const middleWare = [thunk]
+let allStore
 
-//Create Store
-const allStore = createStore(rootReducer, inizialState, compose(
-    applyMiddleware(...middleWare)
-))
+if (Platform.OS === "web" && window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()) {
+    allStore = createStore(rootReducer, inizialState, compose(
+        applyMiddleware(...middleWare),
+        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    ))
+} else {
+    allStore = createStore(rootReducer, inizialState, compose(
+        applyMiddleware(...middleWare)
+    ))
+}
 
 
 export const store = allStore
