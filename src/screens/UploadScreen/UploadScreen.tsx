@@ -99,7 +99,6 @@ const UploadScreen = () => {
                 setDescription('')
                 setSelectCategory('')
                 uploadTask.snapshot.ref.getDownloadURL().then((downloadURL: any) => {
-                    uploadImage({ user_id: allUser.uid, fileUrl: downloadURL, fileName: fileId, description, location, username: allUser.username, date: Date.now() })
                     databaseRef.imagesFileDatabase().push({
                         user_id: allUser.uid,
                         fileName: fileId,
@@ -110,7 +109,12 @@ const UploadScreen = () => {
                         category,
                         date: Date.now()
 
+                    }).then((snap) => {
+                        console.log(snap.key);
+
+                        uploadImage({ keyValue: snap.key, user_id: allUser.uid, fileUrl: downloadURL, fileName: fileId, description, location, username: allUser.username, date: Date.now() })
                     })
+
                 });
             }
         );

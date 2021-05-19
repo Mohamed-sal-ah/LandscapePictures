@@ -62,6 +62,7 @@ margin-left:10px;
 color:${theme.colors.gray.dark};
 font-size:15px;
 outline-width:0 !important;
+outline-style:none;
 `
 
 export const SubmitButton = styled.TouchableOpacity`

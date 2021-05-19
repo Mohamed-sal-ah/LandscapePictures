@@ -21,6 +21,7 @@ width:90%;
 margin-left:10px;
 color:${theme.colors.gray.dark};
 outline-width:0 !important;
+outline-style:none;
 `
 
 export const SearchIconView = styled.TouchableOpacity`
