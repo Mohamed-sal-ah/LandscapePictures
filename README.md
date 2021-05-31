@@ -1,6 +1,6 @@
 # Landscape Pictures
 
-This is a final School Project to implement Landsscape Pictures mockup build with React Navtive and Expo web. Link to hosted [Landscsape Pictures](https://mohamed-sal-ah.github.io/LandscapePictures/) using Github Pages but the hosted demo is a mockup without firebase.
+This is a final School Project to implement Landsscape Pictures mockup build with React Navtive and Expo web. Link to hosted [Landscsape Pictures](https://mohamed-sal-ah.github.io/LandscapePictures/) using Github Pages but the hosted demo is a mockup without firebase CMS and download images functionality.
 
 ## Description
 
