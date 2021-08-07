@@ -5,9 +5,6 @@ export enum screenRoute {
     EXPLORE = '/explore',
     ABOUT = '/about',
     SEARCH = '/search',
-    ACCOUNT = '/auth/account',
-    UPLOAD = '/auth/upload',
-    UPDATE_USER_INFO = '/auth/update_user_info',
     USER_STACK = '/user',
     LOGIN_STACK = '/login',
     SIGN_IN = '/sign_in',
@@ -29,12 +26,6 @@ export enum screenName {
 export enum stackName {
     USER_STACK = 'auth',
     LOGIN_STACK = 'login'
-}
-
-export enum OnAuthScreenName {
-    ACCOUNT = 'Account',
-    UPLOAD = 'Upload',
-    UPDATE_USER_INFO = 'UpdateUserInfo'
 }
 
 export enum LoginScreenName {

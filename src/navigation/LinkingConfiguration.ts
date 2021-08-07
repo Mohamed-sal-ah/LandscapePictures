@@ -15,13 +15,6 @@ export default {
           SignUp: screenRoute.SIGN_UP,
         }
       },
-      // Auth: {
-      //   screens: {
-      //     Account: screenRoute.ACCOUNT,
-      //     Upload: screenRoute.UPLOAD,
-      //     UpdateUserInfo: screenRoute.UPDATE_USER_INFO
-      //   }
-      // }
     },
   },
 };

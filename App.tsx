@@ -1,12 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { Provider } from 'react-redux'
-import { PersistGate } from 'redux-persist/integration/react'
-import { store, persistor } from './src/redux'
-import useCachedResources from './src/hooks/useCachedResources';
-import Navigation from './src/navigation';
-import { DatabaseProvider, AuthProvider } from './src/firebase';
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
+import { store, persistor } from "./src/redux";
+import useCachedResources from "./src/hooks/useCachedResources";
+import Navigation from "./src/navigation";
+import { DatabaseProvider } from "./src/firebase";
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -16,12 +16,12 @@ export default function App() {
     return (
       <Provider store={store}>
         <PersistGate persistor={persistor}>
-            <DatabaseProvider>
-              <SafeAreaProvider>
-                <Navigation />
-                <StatusBar />
-              </SafeAreaProvider>
-            </DatabaseProvider>
+          <DatabaseProvider>
+            <SafeAreaProvider>
+              <Navigation />
+              <StatusBar />
+            </SafeAreaProvider>
+          </DatabaseProvider>
         </PersistGate>
       </Provider>
     );
