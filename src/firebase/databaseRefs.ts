@@ -1,7 +1,7 @@
-import { database } from './firebase'
+// import { database } from './firebase'
 
-export const userDatabase = (uid: string) => database.ref(`users/${uid}`)
+// export const userDatabase = (uid: string) => database.ref(`users/${uid}`)
 
-export const usersDatabase = () => database.ref('users')
+// export const usersDatabase = () => database.ref('users')
 
-export const imagesFileDatabase = () => database.ref("files/images");
+// export const imagesFileDatabase = () => database.ref("files/images");

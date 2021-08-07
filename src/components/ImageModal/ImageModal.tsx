@@ -67,14 +67,14 @@ const ImageModal: FC<Props> = ({ closeImageModal, onNavigateUser, imageData }) =
                         style={{
                             backgroundColor: theme.colors.green_dark_trinary,
                             width: 'fit-content',
-                            display: 'flex',
+                            display: 'none',
                             alignItems: 'center',
                             justifyContent: 'flex-end',
                             flexDirection: 'row',
                             maxWidth: 'fit-content',
                             borderRadius: '5px',
                             overflow: 'hidden',
-                            textDecoration: 'none'
+                            textDecoration: 'none',
                         }}
                         href={imageData.hasOwnProperty('fileUrl') ? imageData.fileUrl : require(`../../storage/images/${imageData.fileName}`)}
                         download={imageData.hasOwnProperty('fileUrl') ? `${imageData.username}_${imageData.url_id}` : `${imageData.username}_${imageData.fileName}`}

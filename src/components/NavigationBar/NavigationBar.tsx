@@ -4,8 +4,8 @@ import theme from '../../themes'
 import * as STYLED from './styled'
 import { LoginScreenName, OnAuthScreenName, screenName } from '../../navigation/routes'
 import { useNavigation } from '@react-navigation/native'
-import { useAuth } from '../../firebase'
-import useConnect from '../../hooks/useConnect'
+// import { useAuth } from '../../firebase'
+// import useConnect from '../../hooks/useConnect'
 import SearchBar from '../SearchBar'
 import { HamburgerBar } from '../../assets'
 import NavigationModal from './NavigationModal'
@@ -17,7 +17,7 @@ type Props = {
 const NavigationBar = ({ showSearchBar = true, searchResult = '' }: Partial<Props>) => {
     const [boolModal, setBoolModal] = useState(false)
     const navigation = useNavigation()
-    const { signOut }: any = useAuth()
+    // const { signOut }: any = useAuth()
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
@@ -37,17 +37,18 @@ const NavigationBar = ({ showSearchBar = true, searchResult = '' }: Partial<Prop
         }
     }
 
-    const isAuth = useConnect((state) => state.auth.user)
+    const isAuth = null
 
     const onSignOut = async () => {
-        await signOut().then(() => {
-            navigation.navigate(screenName.LOGIN_STACK,
-                {
-                    screen: LoginScreenName.SIGN_IN
-                })
-        }).catch((error: any) => {
-            console.error(error.message);
-        })
+        //* Signout funtion
+        // await signOut().then(() => {
+        //     navigation.navigate(screenName.LOGIN_STACK,
+        //         {
+        //             screen: LoginScreenName.SIGN_IN
+        //         })
+        // }).catch((error: any) => {
+        //     console.error(error.message);
+        // })
     }
     return (<>
         <STYLED.FullViewNavigation>

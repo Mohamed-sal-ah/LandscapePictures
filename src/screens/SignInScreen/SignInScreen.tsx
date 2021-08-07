@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { Text, TouchableOpacity } from 'react-native'
 import { screenName, LoginScreenName } from '../../navigation/routes'
 import { useNavigation } from '@react-navigation/native'
-import { useAuth } from '../../firebase'
+// import { useAuth } from '../../firebase'
 import * as STYLED from './styled'
 import theme from '../../themes'
 
@@ -14,7 +14,7 @@ const SignInScreen = () => {
     const [error, setError] = useState(null)
     const [password, setPassword] = useState('')
     const navigation = useNavigation()
-    const { signIn }: any = useAuth()
+    // const { signIn }: any = useAuth()
     useEffect(() => {
         const unsubscribe = navigation.addListener('focus', () => {
             emailRef.current.clear()
@@ -27,11 +27,11 @@ const SignInScreen = () => {
 
     const onSignIn = async () => {
         let clearError = null
-        await signIn(email, password).catch((error: any) => {
-            setError(error)
-            clearError = error
-            console.error(error.message);
-        })
+        // await signIn(email, password).catch((error: any) => {
+        //     setError(error)
+        //     clearError = error
+        //     console.error(error.message);
+        // })
         !clearError && navigation.navigate(screenName.HOME)
     }
     const setDisabled = password === '' || email === ''

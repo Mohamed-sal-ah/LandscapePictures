@@ -6,10 +6,10 @@ import { config } from './configKeys'
 
 // Your web app's Firebase configuration
 
-const app = firebase.initializeApp(config)
+// const app = firebase.initializeApp(config)
 
-export const auth = app.auth()
-export const database = app.database();
-export const storage = app.storage()
+// export const auth = app.auth()
+// export const database = app.database();
+// export const storage = app.storage()
 
-export default app
+// export default app

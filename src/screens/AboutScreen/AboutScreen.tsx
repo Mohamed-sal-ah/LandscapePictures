@@ -20,7 +20,7 @@ const AboutScreen = () => {
                             <STYLED.AboutImage style={{ width: '100%', minHeight: 400, marginBottom: theme.fullWidth > 850 ? 10 : 0 }} source={{ uri: require('../../storage/images/gustav-gullstrand-d6kSvT2xZQo-unsplash.jpg') }} />
                             <View>
                                 <STYLED.SubTitle style={{ fontSize: theme.fullWidth > 850 ? 30 : 25 }}>Browse through nature</STYLED.SubTitle>
-                                <STYLED.AboutText style={{ fontSize: theme.fullWidth > 850 ? 20 : 15 }}>Most of the users and images data comes from localy and images comes from Pexels and Unspalsh. This is due to Firebase storage CORS policy blocking you from downloading directly from the site.</STYLED.AboutText>
+                                <STYLED.AboutText style={{ fontSize: theme.fullWidth > 850 ? 20 : 15 }}>Most of the users and images data comes from localy and images comes from Pexels and Unspalsh but you can't download them.</STYLED.AboutText>
                             </View>
                         </View>
                     </STYLED.SideView>

@@ -16,14 +16,12 @@ export default function App() {
     return (
       <Provider store={store}>
         <PersistGate persistor={persistor}>
-          <AuthProvider>
             <DatabaseProvider>
               <SafeAreaProvider>
                 <Navigation />
                 <StatusBar />
               </SafeAreaProvider>
             </DatabaseProvider>
-          </AuthProvider>
         </PersistGate>
       </Provider>
     );

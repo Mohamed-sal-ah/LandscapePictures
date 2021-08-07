@@ -1,18 +1,18 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
-import { screenName, OnAuthScreenName, LoginScreenName } from './routes'
+import { screenName,  LoginScreenName } from './routes'
 import HomeScreen from '../screens/HomeScreen';
 import SignInScreen from '../screens/SignInScreen';
 import SignUpScreen from '../screens/SignUpScreen';
 import CategoryScreen from '../screens/CategoryScreen';
-import AccountScreen from '../screens/AccountScreen';
+// import AccountScreen from '../screens/AccountScreen';
 import UserScreen from '../screens/UserScreen';
 import ExploreScreen from '../screens/ExploreScreen';
 import AboutScreen from '../screens/AboutScreen';
 import SearchResultScreen from '../screens/SearchResultScreen';
-import UploadScreen from '../screens/UploadScreen/UploadScreen';
-import UpdateUserInfoScreen from '../screens/UpdateUserInfoScreen';
+// import UploadScreen from '../screens/UploadScreen/UploadScreen';
+// import UpdateUserInfoScreen from '../screens/UpdateUserInfoScreen';
 
 export default function Navigation() {
   return (
@@ -39,7 +39,7 @@ function RootNavigator() {
       <Stack.Screen name={screenName.USER} component={UserScreen} options={({ route }: RouteProp) => ({ title: `${route.params.username} - Pictures` })} />
       <Stack.Screen name={screenName.CATEGORY} component={CategoryScreen} options={({ route }: RouteProp) => ({ title: route.params.category })} />
       <Stack.Screen name={screenName.LOGIN_STACK} component={LoginStack} />
-      <Stack.Screen name={screenName.USER_STACK} component={OnAuthStack} />
+      {/* <Stack.Screen name={screenName.USER_STACK} component={OnAuthStack} /> */}
     </Stack.Navigator>
   );
 }
@@ -57,14 +57,14 @@ const LoginStack = () => {
   )
 }
 
-const OnAuthStack = () => {
-  return (
-    <Stack.Navigator
-      screenOptions={{ headerShown: false }}
-    >
-      <Stack.Screen name={OnAuthScreenName.ACCOUNT} component={AccountScreen} options={{ title: 'Account' }} />
-      <Stack.Screen name={OnAuthScreenName.UPDATE_USER_INFO} component={UpdateUserInfoScreen} options={{ title: 'Update User Info' }} />
-      <Stack.Screen name={OnAuthScreenName.UPLOAD} component={UploadScreen} options={{ title: 'Upload' }} />
-    </Stack.Navigator>
-  )
-}
+// const OnAuthStack = () => {
+//   return (
+//     <Stack.Navigator
+//       screenOptions={{ headerShown: false }}
+//     >
+//       <Stack.Screen name={OnAuthScreenName.ACCOUNT} component={AccountScreen} options={{ title: 'Account' }} />
+//       <Stack.Screen name={OnAuthScreenName.UPDATE_USER_INFO} component={UpdateUserInfoScreen} options={{ title: 'Update User Info' }} />
+//       <Stack.Screen name={OnAuthScreenName.UPLOAD} component={UploadScreen} options={{ title: 'Upload' }} />
+//     </Stack.Navigator>
+//   )
+// }
