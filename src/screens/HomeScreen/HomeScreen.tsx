@@ -7,7 +7,7 @@ import { DatabaseContext } from "../../firebase";
 import ImageGallery from "../../components/ImageGallery";
 import Modal from "react-modal";
 import theme from "../../themes";
-import ImageModal from "../../components/ImageModal/ImageModal";
+import ImageModal from "../../components/ImageModal";
 import { useNavigation } from "@react-navigation/native";
 import { screenName } from "../../navigation/routes";
 

@@ -8,7 +8,7 @@ import * as STYLED from "./styled";
 import CategorySelect from "../../components/CategorySelect";
 import Modal from "react-modal";
 import theme from "../../themes";
-import ImageModal from "../../components/ImageModal/ImageModal";
+import ImageModal from "../../components/ImageModal";
 
 const SearchResultScreen = ({ route }: any) => {
   const navigation = useNavigation();

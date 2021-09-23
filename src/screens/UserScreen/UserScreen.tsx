@@ -7,7 +7,7 @@ import NavigationBar from "../../components/NavigationBar";
 import ImageGallery from "../../components/ImageGallery";
 import theme from "../../themes";
 import Modal from "react-modal";
-import ImageModal from "../../components/ImageModal/ImageModal";
+import ImageModal from "../../components/ImageModal";
 import { UserSvg } from "../../assets";
 import * as STYLED from "./styled";
 
