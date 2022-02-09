@@ -3,7 +3,6 @@ import NavigationBar from '../../components/NavigationBar'
 import * as STYLED from './styled'
 import categoryArray from '../../data/categorys.json'
 import ExploreCategoryItem from './ExploreCategoryItem';
-import theme from '../../themes'
 import { ScaledSize, useWindowDimensions } from 'react-native';
 
 const ExploreScreen = () => {

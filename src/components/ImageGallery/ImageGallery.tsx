@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import * as STYLED from "./styled";
 import ImageItem from "./ImageItem";
-import theme from "../../themes";
 import useConnect from "../../hooks/useConnect";
 import { ScaledSize, Text, useWindowDimensions } from "react-native";
 
