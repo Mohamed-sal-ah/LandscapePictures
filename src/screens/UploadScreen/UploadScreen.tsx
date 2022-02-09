@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import { TouchableOpacity } from 'react-native'
+import { ScaledSize, TouchableOpacity, useWindowDimensions } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { OnAuthScreenName, screenName } from '../../navigation/routes'
 import Dropzone from 'react-dropzone'
@@ -32,6 +32,7 @@ const customStyles = {
 };
 
 const UploadScreen = () => {
+    const dimensions: ScaledSize = useWindowDimensions();
     const navigation = useNavigation()
     const [fileSelected, setFileSelected]: any = useState('')
     const [fileBlob, setFileBlob]: any = useState('')
@@ -149,7 +150,7 @@ const UploadScreen = () => {
             {fileSelected !== '' ?
                 <STYLED.SetImageUploadView>
                     <Image
-                        width={(Math.floor(theme.fullWidth * 0.8) % 2 == 0 ? Math.floor(theme.fullWidth * 0.8) : Math.floor(theme.fullWidth * 0.8) + 1)}
+                        width={(Math.floor(dimensions.width * 0.8) % 2 == 0 ? Math.floor(dimensions.width * 0.8) : Math.floor(dimensions.width * 0.8) + 1)}
                         height={475}
                         style={{ paddingBottom: 20 }}
                         source={{ uri: fileSelected }} />

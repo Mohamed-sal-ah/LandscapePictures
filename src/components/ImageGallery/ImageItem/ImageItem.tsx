@@ -1,5 +1,5 @@
 import React, { useRef, FC } from 'react'
-import { StyleSheet } from 'react-native'
+import { ScaledSize, StyleSheet, useWindowDimensions } from 'react-native'
 import Image from 'react-native-scalable-image';
 import theme from '../../../themes';
 import * as STYLED from './styled'
@@ -7,7 +7,6 @@ import { useHover } from 'react-native-web-hooks';
 import { XmarkSvg, UserSvg, ArrowDownSvg } from '../../../assets/index'
 
 type Props = {
-    fullWidth: number,
     users: any,
     oneImage: any,
     setOnAuth: any,
@@ -16,7 +15,8 @@ type Props = {
     openImageModal: any,
 }
 
-const ImageItem: FC<Props> = ({ fullWidth, users, oneImage, setOnAuth, onDeleteImage = null, onNavigateUser = null, openImageModal = null }: any) => {
+const ImageItem: FC<Props> = ({  users, oneImage, setOnAuth, onDeleteImage = null, onNavigateUser = null, openImageModal = null }: any) => {
+    const dimensions: ScaledSize = useWindowDimensions();
     const ref = useRef(null);
     const isHovered = useHover(ref);
     const onPressUser = (e: any) => {
@@ -25,10 +25,10 @@ const ImageItem: FC<Props> = ({ fullWidth, users, oneImage, setOnAuth, onDeleteI
     }
     return (
         <STYLED.ItemView style={{
-            borderTopWidth: fullWidth > 650 ? 0 : 3,
+            borderTopWidth: dimensions.width > 650 ? 0 : 3,
             borderTopColor: theme.colors.gray.light
         }} onPress={() => openImageModal !== null && openImageModal(oneImage)}>
-            <STYLED.MobileViewUserInfo style={{ display: fullWidth > 650 ? 'none' : 'flex' }}>
+            <STYLED.MobileViewUserInfo style={{ display: dimensions.width > 650 ? 'none' : 'flex' }}>
                 <STYLED.ProfilePictureView
                     onPress={() => onPressUser !== null && onPressUser}
                 >
@@ -47,14 +47,14 @@ const ImageItem: FC<Props> = ({ fullWidth, users, oneImage, setOnAuth, onDeleteI
                     </STYLED.DeleteButton>
                 }
             </STYLED.MobileViewUserInfo>
-            <Image width={(Math.floor(theme.fullWidth / 2 - 20) % 2 == 0 ? Math.floor(theme.fullWidth / 2 - 20) : Math.floor(theme.fullWidth / 2 - 20) + 1)}
+            <Image width={(Math.floor(dimensions.width / 2 - 20) % 2 == 0 ? Math.floor(dimensions.width / 2 - 20) : Math.floor(dimensions.width / 2 - 20) + 1)}
                 height={500}
                 accessibilityLabel={oneImage.hasOwnProperty('alt') ? oneImage.alt : `Photo by ${oneImage.username}`}
                 style={{ minWidth: '100%', minHeight: 300 }}
                 source={{ uri: oneImage.hasOwnProperty('fileUrl') ? oneImage.fileUrl : require(`../../../storage/images/${oneImage.fileName}`) }}
             />
             <STYLED.GradientImageView
-                style={fullWidth > 650 ? [isHovered && styles.hover] : { display: 'none' }}
+                style={dimensions.width > 650 ? [isHovered && styles.hover] : { display: 'none' }}
                 ref={ref}
             >
                 {setOnAuth ?
@@ -102,7 +102,7 @@ const ImageItem: FC<Props> = ({ fullWidth, users, oneImage, setOnAuth, onDeleteI
                     </>
                 }
             </STYLED.GradientImageView>
-            <STYLED.MobileViewUserInfo style={{ display: fullWidth > 650 ? 'none' : 'flex', justifyContent: 'space-between' }}>
+            <STYLED.MobileViewUserInfo style={{ display: dimensions.width > 650 ? 'none' : 'flex', justifyContent: 'space-between' }}>
                 <STYLED.MobileViewUserInfoText>
                     {oneImage.description}
                 </STYLED.MobileViewUserInfoText>

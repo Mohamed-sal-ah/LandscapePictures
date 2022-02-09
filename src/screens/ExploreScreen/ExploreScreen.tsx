@@ -3,9 +3,10 @@ import NavigationBar from '../../components/NavigationBar'
 import * as STYLED from './styled'
 import categoryArray from '../../data/categorys.json'
 import ExploreCategoryItem from './ExploreCategoryItem';
-import theme from '../../themes'
+import { ScaledSize, useWindowDimensions } from 'react-native';
 
 const ExploreScreen = () => {
+    const dimensions: ScaledSize = useWindowDimensions();
     const returnGridAuto = (width: number) => {
         if (width > 1000) {
             return 'auto auto auto'
@@ -27,7 +28,7 @@ const ExploreScreen = () => {
                     height: 'fit-content',
                     display: 'grid',
                     gap: '10px',
-                    gridTemplateColumns: returnGridAuto(theme.fullWidth)
+                    gridTemplateColumns: returnGridAuto(dimensions.width)
                 }}>
                     {categoryArray.map((categoryItem: any, index: number) => (
                         <ExploreCategoryItem categoryItem={categoryItem} key={index} />

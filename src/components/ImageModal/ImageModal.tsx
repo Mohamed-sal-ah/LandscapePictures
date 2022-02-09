@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { TouchableOpacity } from 'react-native'
+import { ScaledSize, TouchableOpacity, useWindowDimensions } from 'react-native'
 import Image from 'react-native-scalable-image';
 import theme from '../../themes';
 import * as STYLED from './styled'
@@ -13,6 +13,7 @@ type Props = {
 }
 
 const ImageModal: FC<Props> = ({ closeImageModal, onNavigateUser, imageData }) => {
+     const dimensions: ScaledSize = useWindowDimensions();
     const { users } = useConnect((state) => state.data)
     const modalWidth = (width: number) => {
         if (width > 800) {
@@ -24,7 +25,7 @@ const ImageModal: FC<Props> = ({ closeImageModal, onNavigateUser, imageData }) =
         }
     }
     return (
-        <STYLED.FullView style={{ minWidth: modalWidth(theme.fullWidth) }}>
+        <STYLED.FullView style={{ minWidth: modalWidth(dimensions.width) }}>
             {imageData !== '' && <>
                 <STYLED.HeaderAndExitView>
                     <STYLED.HeaderAndTextView>
@@ -48,8 +49,8 @@ const ImageModal: FC<Props> = ({ closeImageModal, onNavigateUser, imageData }) =
                     </TouchableOpacity>
                 </STYLED.HeaderAndExitView>
                 <Image
-                    width={(Math.floor(theme.fullWidth * 0.9) % 2 == 0 ? Math.floor(theme.fullWidth * 0.9) : Math.floor(theme.fullWidth * 0.9) + 1)}
-                    height={(Math.floor(theme.fullHeight * 0.7) % 2 == 0 ? Math.floor(theme.fullHeight * 0.7) : Math.floor(theme.fullHeight * 0.7) + 1)}
+                    width={(Math.floor(dimensions.width * 0.9) % 2 == 0 ? Math.floor(dimensions.width * 0.9) : Math.floor(dimensions.width * 0.9) + 1)}
+                    height={(Math.floor(dimensions.height * 0.7) % 2 == 0 ? Math.floor(dimensions.height * 0.7) : Math.floor(dimensions.height * 0.7) + 1)}
                     style={{ paddingBottom: 20 }}
                     accessibilityLabel={imageData.hasOwnProperty('alt') ? imageData.alt : `Photo by ${imageData.username}`}
                     source={{ uri: imageData.hasOwnProperty('fileUrl') ? imageData.fileUrl : require(`../../storage/images/${imageData.fileName}`) }} />

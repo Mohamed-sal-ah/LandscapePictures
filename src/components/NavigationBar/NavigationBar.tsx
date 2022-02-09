@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { TouchableOpacity } from 'react-native'
+import { ScaledSize, TouchableOpacity, useWindowDimensions } from 'react-native'
 import theme from '../../themes'
 import * as STYLED from './styled'
 import { LoginScreenName, OnAuthScreenName, screenName } from '../../navigation/routes'
@@ -15,6 +15,7 @@ type Props = {
     showSearchBar: boolean,
 }
 const NavigationBar = ({ showSearchBar = true, searchResult = '' }: Partial<Props>) => {
+    const dimensions: ScaledSize = useWindowDimensions();
     const [boolModal, setBoolModal] = useState(false)
     const navigation = useNavigation()
     const { signOut }: any = useAuth()
@@ -29,7 +30,7 @@ const NavigationBar = ({ showSearchBar = true, searchResult = '' }: Partial<Prop
     const handleScroll = () => {
         const offset = window.scrollY;
 
-        if (offset > theme.fullHeight) {
+        if (offset > dimensions.height) {
             setScrolled(true);
         }
         else {
@@ -52,13 +53,13 @@ const NavigationBar = ({ showSearchBar = true, searchResult = '' }: Partial<Prop
     return (<>
         <STYLED.FullViewNavigation>
             <TouchableOpacity onPress={() => navigation.navigate(screenName.HOME)}>
-                <STYLED.TitlePage style={{ fontSize: theme.fullWidth > 650 ? 35 : 30 }}>{theme.fullWidth > 650 ? 'Landscape Pictures' : 'LP'}</STYLED.TitlePage>
+                <STYLED.TitlePage style={{ fontSize: dimensions.width > 650 ? 35 : 30 }}>{dimensions.width > 650 ? 'Landscape Pictures' : 'LP'}</STYLED.TitlePage>
             </TouchableOpacity>
-            {scrolled || showSearchBar || theme.fullWidth < 650 ?
+            {scrolled || showSearchBar || dimensions.width < 650 ?
                 <SearchBar searchResult={searchResult} /> : null
             }
 
-            {theme.fullWidth > 1060 ? <STYLED.NavigationSection>
+            {dimensions.width > 1060 ? <STYLED.NavigationSection>
                 <STYLED.NavigationLinks>
                     <STYLED.LinksText onPress={() => navigation.navigate(screenName.EXPLORE)}>Explore</STYLED.LinksText>
                 </STYLED.NavigationLinks>
@@ -97,7 +98,7 @@ const NavigationBar = ({ showSearchBar = true, searchResult = '' }: Partial<Prop
                 }
             </STYLED.NavigationSection> :
                 <STYLED.HamburgerBarButton onPress={() => setBoolModal(!boolModal)}>
-                    <HamburgerBar fillColor={theme.colors.gray.dark} size={theme.fullWidth > 600 ? 25 : 20} />
+                    <HamburgerBar fillColor={theme.colors.gray.dark} size={dimensions.width > 600 ? 25 : 20} />
                 </STYLED.HamburgerBarButton>
             }
         </STYLED.FullViewNavigation>

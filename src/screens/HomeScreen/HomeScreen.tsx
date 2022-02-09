@@ -10,8 +10,10 @@ import theme from "../../themes";
 import ImageModal from "../../components/ImageModal";
 import { useNavigation } from "@react-navigation/native";
 import { screenName } from "../../navigation/routes";
+import { ScaledSize, useWindowDimensions } from "react-native";
 
 const HomeScreen: FC = () => {
+  const dimensions: ScaledSize = useWindowDimensions();
   const data = useContext(DatabaseContext);
   const { curentData }: any = data;
   const { images } = curentData;
@@ -53,32 +55,35 @@ const HomeScreen: FC = () => {
         />
         <STYLED.CenterPositionView
           style={{
-            justifyContent: theme.fullWidth > 650 ? "center" : "flex-end",
+            justifyContent: dimensions.width > 650 ? "center" : "flex-end",
           }}
         >
           <STYLED.BackgroundView
             style={{
-              borderRadius: theme.fullWidth > 650 ? 15 : 0,
-              alignItems: theme.fullWidth > 650 ? "flex-start" : "center",
-              width: theme.fullWidth > 650 ? "fit-content" : "100%",
-              padding: theme.fullWidth > 650 ? 30 : 10,
+              borderRadius: dimensions.width > 650 ? 15 : 0,
+              alignItems: dimensions.width > 650 ? "flex-start" : "center",
+              width: dimensions.width > 650 ? "fit-content" : "100%",
+              padding: dimensions.width > 650 ? 30 : 10,
             }}
           >
             <STYLED.BackgroundTitle
-              style={{ fontSize: theme.fullWidth > 650 ? 36 : 30 }}
+              style={{ fontSize: dimensions.width > 650 ? 36 : 30 }}
             >
               Landscape Pictures
             </STYLED.BackgroundTitle>
             <STYLED.BackgroundText
-              style={{ fontSize: theme.fullWidth > 650 ? 15 : 12 }}
+              style={{ 
+                fontSize: dimensions.width > 650 ? 15 : 12,
+                paddingBottom: dimensions.width > 650 ? 10 : 0,
+              }}
             >
               This is where you can find beautiful photos of nature
             </STYLED.BackgroundText>
-            {theme.fullWidth > 650 && <SearchBar widthStyle={"100%"} />}
+            {dimensions.width > 650 && <SearchBar widthStyle={"100%"} />}
           </STYLED.BackgroundView>
         </STYLED.CenterPositionView>
         <STYLED.BackgroundImageInfo
-          style={{ display: theme.fullWidth > 650 ? "flex" : "none" }}
+          style={{ display: dimensions.width > 650 ? "flex" : "none" }}
         >
           <STYLED.BackgroundText>
             Picture taken by {firstImage.username}
@@ -91,16 +96,16 @@ const HomeScreen: FC = () => {
         onRequestClose={() => setBoolModal(false)}
         style={{
           content: {
-            top: theme.fullWidth > 650 ? "50%" : "0",
-            left: theme.fullWidth > 650 ? "50%" : "0",
+            top: dimensions.width > 650 ? "50%" : "0",
+            left: dimensions.width > 650 ? "50%" : "0",
             right: "auto",
             bottom: "auto",
-            marginRight: theme.fullWidth > 650 ? "-50%" : "0",
-            transform: theme.fullWidth > 650 ? "translate(-50%, -50%)" : "none",
-            width: theme.fullWidth > 650 ? "fit-content" : "100%",
-            height: theme.fullWidth > 650 ? "fit-content" : "100%",
+            marginRight: dimensions.width > 650 ? "-50%" : "0",
+            transform: dimensions.width > 650 ? "translate(-50%, -50%)" : "none",
+            width: dimensions.width > 650 ? "fit-content" : "100%",
+            height: dimensions.width > 650 ? "fit-content" : "100%",
             padding: 0,
-            borderRadius: theme.fullWidth > 650 ? 4 : 0,
+            borderRadius: dimensions.width > 650 ? 4 : 0,
             display: "flex",
             alignItems: "center",
           },

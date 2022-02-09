@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect, useRef } from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, useWindowDimensions, ScaledSize } from 'react-native'
 import NavigationBar from '../../components/NavigationBar'
 import { DatabaseContext, useDatabase, storageRef, databaseRef } from '../../firebase'
 import { UserSvg } from '../../assets/'
@@ -30,6 +30,7 @@ const customStyles = {
 };
 
 const AccountScreen = () => {
+    const dimensions: ScaledSize = useWindowDimensions();
     const navigation = useNavigation()
     const authUser = useConnect((state) => state.auth.user)
     const dataContext = useContext(DatabaseContext)
@@ -92,13 +93,13 @@ const AccountScreen = () => {
                             <UserSvg size={50} fillColor={theme.colors.white} />
                         </STYLED.DefaultProfilePictureView>}
                         <STYLED.UserInfoTextView style={{
-                            maxWidth: theme.fullWidth > 650 ? 200 : 'fit-content',
-                            alignItems: theme.fullWidth > 650 ? 'flex-start' : 'center',
-                            paddingLeft: theme.fullWidth > 650 ? 20 : 0
+                            maxWidth: dimensions.width > 650 ? 200 : 'fit-content',
+                            alignItems: dimensions.width > 650 ? 'flex-start' : 'center',
+                            paddingLeft: dimensions.width > 650 ? 20 : 0
                         }}>
                             <STYLED.UserTitle>{authUser.username}</STYLED.UserTitle>
                             <STYLED.UserText
-                                style={{ textAlign: theme.fullWidth > 650 ? 'left' : 'center' }}
+                                style={{ textAlign: dimensions.width > 650 ? 'left' : 'center' }}
                             >{authUser.user_info}</STYLED.UserText>
                         </STYLED.UserInfoTextView>
                     </STYLED.UserInfoView>
