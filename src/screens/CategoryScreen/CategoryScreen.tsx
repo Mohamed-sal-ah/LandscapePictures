@@ -8,6 +8,7 @@ import ImageGallery from "../../components/ImageGallery";
 import Modal from "react-modal";
 import theme from "../../themes";
 import ImageModal from "../../components/ImageModal";
+import { ScaledSize, useWindowDimensions } from "react-native";
 
 const objectText = [
   {
@@ -43,6 +44,7 @@ const objectText = [
 ];
 
 const CategoryScreen = ({ route }: any) => {
+  const dimensions: ScaledSize = useWindowDimensions();
   const navigation = useNavigation();
   const { images } = useConnect((state) => state.data);
   const [filtredImages, setFiltredImages]: any[] = useState([]);
@@ -98,17 +100,17 @@ const CategoryScreen = ({ route }: any) => {
             onRequestClose={() => setBoolModal(false)}
             style={{
               content: {
-                top: theme.fullWidth > 650 ? "50%" : "0",
-                left: theme.fullWidth > 650 ? "50%" : "0",
+                top: dimensions.width > 650 ? "50%" : "0",
+                left: dimensions.width > 650 ? "50%" : "0",
                 right: "auto",
                 bottom: "auto",
-                marginRight: theme.fullWidth > 650 ? "-50%" : "0",
+                marginRight: dimensions.width > 650 ? "-50%" : "0",
                 transform:
-                  theme.fullWidth > 650 ? "translate(-50%, -50%)" : "none",
-                width: theme.fullWidth > 650 ? "fit-content" : "100%",
-                height: theme.fullWidth > 650 ? "fit-content" : "100%",
+                  dimensions.width > 650 ? "translate(-50%, -50%)" : "none",
+                width: dimensions.width > 650 ? "fit-content" : "100%",
+                height: dimensions.width > 650 ? "fit-content" : "100%",
                 padding: 0,
-                borderRadius: theme.fullWidth > 650 ? 4 : 0,
+                borderRadius: dimensions.width > 650 ? 4 : 0,
                 display: "flex",
                 alignItems: "center",
               },

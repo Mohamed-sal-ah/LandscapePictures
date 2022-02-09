@@ -1,5 +1,5 @@
 import React, { useRef, FC } from "react";
-import { StyleSheet } from "react-native";
+import { ScaledSize, StyleSheet, useWindowDimensions } from "react-native";
 import Image from "react-native-scalable-image";
 import theme from "../../../themes";
 import * as STYLED from "./styled";
@@ -7,7 +7,6 @@ import { useHover } from "react-native-web-hooks";
 import { XmarkSvg, UserSvg, ArrowDownSvg } from "../../../assets/index";
 
 type Props = {
-  fullWidth: number;
   users: any;
   oneImage: any;
   onDeleteImage: any;
@@ -16,12 +15,12 @@ type Props = {
 };
 
 const ImageItem: FC<Props> = ({
-  fullWidth,
   users,
   oneImage,
   onNavigateUser = null,
   openImageModal = null,
 }: any) => {
+  const dimensions: ScaledSize = useWindowDimensions();
   const ref = useRef(null);
   const isHovered = useHover(ref);
   const onPressUser = (e: any) => {
@@ -31,13 +30,13 @@ const ImageItem: FC<Props> = ({
   return (
     <STYLED.ItemView
       style={{
-        borderTopWidth: fullWidth > 650 ? 0 : 3,
+        borderTopWidth: dimensions.width > 650 ? 0 : 3,
         borderTopColor: theme.colors.gray.light,
       }}
       onPress={() => openImageModal !== null && openImageModal(oneImage)}
     >
       <STYLED.MobileViewUserInfo
-        style={{ display: fullWidth > 650 ? "none" : "flex" }}
+        style={{ display: dimensions.width > 650 ? "none" : "flex" }}
       >
         <STYLED.ProfilePictureView
           onPress={() => onPressUser !== null && onPressUser}
@@ -66,9 +65,9 @@ const ImageItem: FC<Props> = ({
       </STYLED.MobileViewUserInfo>
       <Image
         width={
-          Math.floor(theme.fullWidth / 2 - 20) % 2 == 0
-            ? Math.floor(theme.fullWidth / 2 - 20)
-            : Math.floor(theme.fullWidth / 2 - 20) + 1
+          Math.floor(dimensions.width / 2 - 20) % 2 == 0
+            ? Math.floor(dimensions.width / 2 - 20)
+            : Math.floor(dimensions.width / 2 - 20) + 1
         }
         height={500}
         accessibilityLabel={
@@ -85,7 +84,9 @@ const ImageItem: FC<Props> = ({
       />
       <STYLED.GradientImageView
         style={
-          fullWidth > 650 ? [isHovered && styles.hover] : { display: "none" }
+          dimensions.width > 650
+            ? [isHovered && styles.hover]
+            : { display: "none" }
         }
         ref={ref}
       >
@@ -152,7 +153,7 @@ const ImageItem: FC<Props> = ({
       </STYLED.GradientImageView>
       <STYLED.MobileViewUserInfo
         style={{
-          display: fullWidth > 650 ? "none" : "flex",
+          display: dimensions.width > 650 ? "none" : "flex",
           justifyContent: "space-between",
         }}
       >

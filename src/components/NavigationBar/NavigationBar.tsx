@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { TouchableOpacity } from "react-native";
+import {
+  ScaledSize,
+  TouchableOpacity,
+  useWindowDimensions,
+} from "react-native";
 import theme from "../../themes";
 import * as STYLED from "./styled";
 import { LoginScreenName, screenName } from "../../navigation/routes";
@@ -16,6 +20,7 @@ const NavigationBar = ({
   showSearchBar = true,
   searchResult = "",
 }: Partial<Props>) => {
+  const dimensions: ScaledSize = useWindowDimensions();
   const [boolModal, setBoolModal] = useState(false);
   const navigation = useNavigation();
   const [scrolled, setScrolled] = useState(false);
@@ -29,7 +34,7 @@ const NavigationBar = ({
   const handleScroll = () => {
     const offset = window.scrollY;
 
-    if (offset > theme.fullHeight) {
+    if (offset > dimensions.height) {
       setScrolled(true);
     } else {
       setScrolled(false);
@@ -41,16 +46,16 @@ const NavigationBar = ({
       <STYLED.FullViewNavigation>
         <TouchableOpacity onPress={() => navigation.navigate(screenName.HOME)}>
           <STYLED.TitlePage
-            style={{ fontSize: theme.fullWidth > 650 ? 35 : 30 }}
+            style={{ fontSize: dimensions.width > 650 ? 35 : 30 }}
           >
-            {theme.fullWidth > 650 ? "Landscape Pictures" : "LP"}
+            {dimensions.width > 650 ? "Landscape Pictures" : "LP"}
           </STYLED.TitlePage>
         </TouchableOpacity>
-        {scrolled || showSearchBar || theme.fullWidth < 650 ? (
+        {scrolled || showSearchBar || dimensions.width < 650 ? (
           <SearchBar searchResult={searchResult} />
         ) : null}
 
-        {theme.fullWidth > 1060 ? (
+        {dimensions.width > 1060 ? (
           <STYLED.NavigationSection>
             <STYLED.NavigationLinks>
               <STYLED.LinksText
@@ -93,7 +98,7 @@ const NavigationBar = ({
           <STYLED.HamburgerBarButton onPress={() => setBoolModal(!boolModal)}>
             <HamburgerBar
               fillColor={theme.colors.gray.dark}
-              size={theme.fullWidth > 600 ? 25 : 20}
+              size={dimensions.width > 600 ? 25 : 20}
             />
           </STYLED.HamburgerBarButton>
         )}
